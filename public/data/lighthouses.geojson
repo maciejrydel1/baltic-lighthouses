@@ -1,0 +1,488 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Baltic Lighthouses",
+    "description": "Lighthouses of the Baltic Sea - starting with Poland",
+    "version": "1.0.0",
+    "lastUpdated": "2026-02-15",
+    "sources": [
+      "OpenStreetMap",
+      "ARLHS",
+      "Urząd Morski Gdynia/Szczecin"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2794,
+          53.9208
+        ]
+      },
+      "properties": {
+        "id": "pl-swinoujscie",
+        "name": "Świnoujście",
+        "nameLocal": "Latarnia Morska Świnoujście",
+        "country": "PL",
+        "region": "West Pomerania",
+        "yearBuilt": 1857,
+        "heightM": 65.0,
+        "focalHeightM": 68.0,
+        "rangeNm": 26,
+        "lightCharacter": "Fl W 5s",
+        "lightColor": "white",
+        "construction": "round brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-019",
+        "admiraltyCode": "C2668",
+        "description": "Najwyższa latarnia morska na polskim wybrzeżu i jedna z najwyższych nad Bałtykiem. Zbudowana w latach 1854-1857 z żółtej cegły. Mieści muzeum latarnictwa i ratownictwa morskiego. Soczewka Fresnela I klasy.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Latarnia_morska_%C5%9Awinouj%C5%9Bcie.jpg",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_%C5%9Awinouj%C5%9Bcie",
+        "visitorsPerYear": 75000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0681,
+          54.0983
+        ]
+      },
+      "properties": {
+        "id": "pl-niechorze",
+        "name": "Niechorze",
+        "nameLocal": "Latarnia Morska Niechorze",
+        "country": "PL",
+        "region": "West Pomerania",
+        "yearBuilt": 1866,
+        "heightM": 45.0,
+        "focalHeightM": 65.0,
+        "rangeNm": 23,
+        "lightCharacter": "Fl(3) W 15s",
+        "lightColor": "white",
+        "construction": "round brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-013",
+        "admiraltyCode": "C2712",
+        "description": "Jedna z najpiękniejszych latarni w Polsce, położona na 20-metrowej skarpie. Zbudowana z czerwonej cegły w stylu neogotyckim. Charakterystyczny czarno-biały wzór.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Faro_de_Niechorze%2C_voivodato_de_Pomerania_Occidental%2C_Polonia%2C_2018-11-03%2C_DD_26-31_PAN.jpg/800px-Faro_de_Niechorze%2C_voivodato_de_Pomerania_Occidental%2C_Polonia%2C_2018-11-03%2C_DD_26-31_PAN.jpg",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Niechorze",
+        "visitorsPerYear": 71000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.5557,
+          54.1872
+        ]
+      },
+      "properties": {
+        "id": "pl-kolobrzeg",
+        "name": "Kołobrzeg",
+        "nameLocal": "Latarnia Morska Kołobrzeg",
+        "country": "PL",
+        "region": "West Pomerania",
+        "yearBuilt": 1945,
+        "heightM": 26.0,
+        "focalHeightM": 36.0,
+        "rangeNm": 16,
+        "lightCharacter": "Fl R 5s",
+        "lightColor": "red",
+        "construction": "octagonal brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-009",
+        "admiraltyCode": "C2742",
+        "description": "Zbudowana po II wojnie światowej na fundamentach starego fortu. Ośmiokątna wieża z czerwonej cegły. Mieści muzeum portu i latarnictwa.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Latarnia_morska_Ko%C5%82obrzeg.jpg/960px-Latarnia_morska_Ko%C5%82obrzeg.jpg",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Ko%C5%82obrzeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.8654,
+          54.229
+        ]
+      },
+      "properties": {
+        "id": "pl-gaski",
+        "name": "Gąski",
+        "nameLocal": "Latarnia Morska Gąski",
+        "country": "PL",
+        "region": "West Pomerania",
+        "yearBuilt": 1878,
+        "heightM": 41.2,
+        "focalHeightM": 50.1,
+        "rangeNm": 26,
+        "lightCharacter": "Fl(2) W 15s",
+        "lightColor": "white",
+        "construction": "round brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-004",
+        "admiraltyCode": "C2766",
+        "description": "Zbudowana z czerwonej cegły w latach 1876-1878. Wysokość 41,2 m. Pierwotnie wyposażona w soczewkę Fresnela z lampami naftowymi. Zelektryfikowana w 1927 roku.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Latarnia_morska_G%C4%85ski.jpg/960px-Latarnia_morska_G%C4%85ski.jpg",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_G%C4%85ski",
+        "visitorsPerYear": 30000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.3843,
+          54.43
+        ]
+      },
+      "properties": {
+        "id": "pl-darlowko",
+        "name": "Darłówko",
+        "nameLocal": "Latarnia Morska Darłówko",
+        "country": "PL",
+        "region": "West Pomerania",
+        "yearBuilt": 1885,
+        "heightM": 21.0,
+        "focalHeightM": 22.0,
+        "rangeNm": 17,
+        "lightCharacter": "Fl G 5s",
+        "lightColor": "green",
+        "construction": "square brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-002",
+        "admiraltyCode": "C2788",
+        "description": "Niewielka, urokliwa latarnia z 1885 roku, zbudowana z cegły. Najdalej na wschód wysunięta latarnia na polskim wybrzeżu. Położona u ujścia Wieprzy do Bałtyku.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Dar%C5%82%C3%B3wko"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.542,
+          54.5393
+        ]
+      },
+      "properties": {
+        "id": "pl-jaroslawiec",
+        "name": "Jarosławiec",
+        "nameLocal": "Latarnia Morska Jarosławiec",
+        "country": "PL",
+        "region": "West Pomerania",
+        "yearBuilt": 1838,
+        "heightM": 33.3,
+        "focalHeightM": 43.0,
+        "rangeNm": 23,
+        "lightCharacter": "Fl(4) W 18s",
+        "lightColor": "white",
+        "construction": "square brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-006",
+        "admiraltyCode": "C2810",
+        "description": "Wieża podzielona gzymsami na cztery kondygnacje, wysokość 33,3 m. Zbudowana z czerwonej glazurowanej cegły. Światło widoczne z odległości ok. 42 km.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Jaros%C5%82awiec"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.8561,
+          54.591
+        ]
+      },
+      "properties": {
+        "id": "pl-ustka",
+        "name": "Ustka",
+        "nameLocal": "Latarnia Morska Ustka",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1892,
+        "heightM": 19.5,
+        "focalHeightM": 23.0,
+        "rangeNm": 18,
+        "lightCharacter": "Fl R 5s",
+        "lightColor": "red",
+        "construction": "octagonal brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-021",
+        "admiraltyCode": "C2836",
+        "description": "Charakterystyczny budynek z czerwonej cegły z 1892 roku. Wieża na planie ośmiokąta, przylegająca do budynku stacji pilotów. Liczne gzymsy i okna różnych rozmiarów.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Latarnia_Morska_Ustka_sierpie%C5%84_2022.jpg/800px-Latarnia_Morska_Ustka_sierpie%C5%84_2022.jpg",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Ustka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.2491,
+          54.721
+        ]
+      },
+      "properties": {
+        "id": "pl-czolpino",
+        "name": "Czołpino",
+        "nameLocal": "Latarnia Morska Czołpino",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1875,
+        "heightM": 25.2,
+        "focalHeightM": 75.0,
+        "rangeNm": 26,
+        "lightCharacter": "Fl(2) W 12s",
+        "lightColor": "white",
+        "construction": "round brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-001",
+        "admiraltyCode": "C2862",
+        "description": "Położona w Słowińskim Parku Narodowym na jednej z najwyższych wydm. Dzięki lokalizacji jej światło jest na wysokości 75 m n.p.m. — mimo że sama wieża ma tylko 25,2 m.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Czo%C5%82pino"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.734,
+          54.791
+        ]
+      },
+      "properties": {
+        "id": "pl-stilo",
+        "name": "Stilo",
+        "nameLocal": "Latarnia Morska Stilo",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1906,
+        "heightM": 33.4,
+        "focalHeightM": 70.0,
+        "rangeNm": 23,
+        "lightCharacter": "Fl(3) W 18s",
+        "lightColor": "white",
+        "construction": "iron plate tower (16-sided)",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-017",
+        "admiraltyCode": "C2886",
+        "description": "Unikalna szesnastoboczna wieża z płyt żelaznych, ozdobiona trzema pasami kolorów: czerwonym, białym i czarnym. Jedna z dwóch całkowicie metalowych latarni w Polsce. Zbudowana 1904-1906.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Stilo_Latarnia.JPG/800px-Stilo_Latarnia.JPG",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Stilo",
+        "visitorsPerYear": 50000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.333,
+          54.832
+        ]
+      },
+      "properties": {
+        "id": "pl-rozewie",
+        "name": "Rozewie",
+        "nameLocal": "Latarnia Morska Rozewie",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1822,
+        "heightM": 32.7,
+        "focalHeightM": 83.0,
+        "rangeNm": 26,
+        "lightCharacter": "Fl(3) W 20s",
+        "lightColor": "white",
+        "construction": "round brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-015",
+        "admiraltyCode": "C2910",
+        "description": "Najstarsza czynna latarnia morska w Polsce, zbudowana w 1822 roku. Położona na Przylądku Rozewie. Mieści ekspozycję makiet wszystkich polskich latarni morskich. Najpopularniejsza latarnia w Polsce — ok. 114 000 odwiedzających rocznie.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Rozewie_-_latarnia_morska.jpg/960px-Rozewie_-_latarnia_morska.jpg",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Rozewie",
+        "visitorsPerYear": 114000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.672,
+          54.697
+        ]
+      },
+      "properties": {
+        "id": "pl-jastarnia",
+        "name": "Jastarnia",
+        "nameLocal": "Latarnia Morska Jastarnia",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1950,
+        "heightM": 13.5,
+        "focalHeightM": 15.0,
+        "rangeNm": 17,
+        "lightCharacter": "Fl R 3s",
+        "lightColor": "red",
+        "construction": "metal tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-007",
+        "admiraltyCode": "C2924",
+        "description": "Najniższa latarnia na polskim wybrzeżu — zaledwie 13,5 m. Malowana w czerwono-białe poziome pasy. Metalowa konstrukcja — jedna z dwóch całkowicie metalowych latarni w Polsce (obok Stilo).",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Latarnia_Jastarnia.jpg",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Jastarnia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.812,
+          54.608
+        ]
+      },
+      "properties": {
+        "id": "pl-hel",
+        "name": "Hel",
+        "nameLocal": "Latarnia Morska Hel",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1942,
+        "heightM": 41.5,
+        "focalHeightM": 42.0,
+        "rangeNm": 17,
+        "lightCharacter": "Fl(2) W 10s",
+        "lightColor": "white",
+        "construction": "round concrete tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-005",
+        "admiraltyCode": "C2930",
+        "description": "Betonowa wieża z 1942 roku, zastąpiła zniszczoną w wojnie latarnię z 1827 r. Położona na końcu Półwyspu Helskiego. Jedna z najpopularniejszych latarni — ok. 67 000 odwiedzających rocznie.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Latarnia_Morska_Hel%2C_20220522_1619_6208.jpg/800px-Latarnia_Morska_Hel%2C_20220522_1619_6208.jpg",
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Hel",
+        "visitorsPerYear": 67000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.66,
+          54.408
+        ]
+      },
+      "properties": {
+        "id": "pl-gdansk-nowy-port",
+        "name": "Gdańsk Nowy Port",
+        "nameLocal": "Latarnia Morska Gdańsk Nowy Port",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1894,
+        "heightM": 27.0,
+        "focalHeightM": 30.0,
+        "rangeNm": 17,
+        "lightCharacter": "Oc(2) W 12s",
+        "lightColor": "white",
+        "construction": "octagonal brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-003",
+        "admiraltyCode": "C2956",
+        "description": "Ośmiokątna wieża z czerwonej cegły z 1894 roku. Zlokalizowana przy wejściu do portu gdańskiego. Jedna z najbardziej rozpoznawalnych latarni Zatoki Gdańskiej.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Gda%C5%84sk_Nowy_Port"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.571,
+          54.448
+        ]
+      },
+      "properties": {
+        "id": "pl-sopot",
+        "name": "Sopot",
+        "nameLocal": "Latarnia Morska Sopot",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1903,
+        "heightM": 30.0,
+        "focalHeightM": 35.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl G 5s",
+        "lightColor": "green",
+        "construction": "round brick tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "POL-016",
+        "admiraltyCode": "C2946",
+        "description": "Latarnia z 1903 roku, położona w centrum Sopotu. Niedostępna turystycznie — znajduje się na terenie jednostki wojskowej. Emituje zielone światło.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Sopot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.448,
+          54.381
+        ]
+      },
+      "properties": {
+        "id": "pl-krynica-morska",
+        "name": "Krynica Morska",
+        "nameLocal": "Latarnia Morska Krynica Morska",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1951,
+        "heightM": 26.2,
+        "focalHeightM": 33.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl(2) R 10s",
+        "lightColor": "red",
+        "construction": "round brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "POL-010",
+        "admiraltyCode": "C2972",
+        "description": "Najmłodsza klasyczna latarnia na polskim wybrzeżu (1951). Położona na Mierzei Wiślanej. Najdalej na wschód wysunięta latarnia morska w Polsce. Ok. 56 000 odwiedzających rocznie.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Krynica_Morska",
+        "visitorsPerYear": 56000
+      }
+    }
+  ]
+}
