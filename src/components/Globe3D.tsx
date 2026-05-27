@@ -172,7 +172,7 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
       onGlobeRef={handleGlobeRef}
       width={dimensions.width}
       height={dimensions.height}
-      globeImageUrl="/textures/earth-blue-marble.jpg"
+      globeImageUrl="/textures/earth-21k.jpg"
       bumpImageUrl="/textures/earth-topology.png"
       backgroundImageUrl="/textures/night-sky.png"
       atmosphereColor="#4a90d9"

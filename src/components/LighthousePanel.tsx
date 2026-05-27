@@ -218,7 +218,7 @@ function LighthouseImage({ id, name, imageUrl }: { id: string; name: string; ima
       <img
         src={currentSrc || ''}
         alt={name}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain bg-black/50"
         loading="lazy"
         onError={() => {
           if (!localError) {
