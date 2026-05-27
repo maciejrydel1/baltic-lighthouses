@@ -647,6 +647,384 @@
         "imageUrl": null,
         "wikipediaUrl": "https://en.wikipedia.org/wiki/Vent%C4%97s_Ragas_Lighthouse"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.634, 57.802]
+      },
+      "properties": {
+        "id": "lv-kolka",
+        "name": "Kolka",
+        "nameLocal": "Kolkas bāka",
+        "country": "LV",
+        "region": "Dundaga",
+        "yearBuilt": 1875,
+        "heightM": 21.0,
+        "focalHeightM": 21.0,
+        "rangeNm": 12,
+        "lightCharacter": "Fl W 5s",
+        "lightColor": "white",
+        "construction": "iron tower on artificial island",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "LAT-008",
+        "description": "Jedyna latarnia na Łotwie zbudowana na sztucznej wyspie, 5.2 km od brzegu w Cieśninie Irbe. Wyspa została usypana z głazów transportowanych po lodzie w latach 1873-1875. Wieża wykonana w Sankt Petersburgu.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kolka_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.717, 57.567]
+      },
+      "properties": {
+        "id": "lv-ovisi",
+        "name": "Oviši",
+        "nameLocal": "Ovišu bāka",
+        "country": "LV",
+        "region": "Ventspils",
+        "yearBuilt": 1814,
+        "heightM": 37.0,
+        "focalHeightM": 38.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl(2) W 10s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "LAT-013",
+        "description": "Najstarsza latarnia na Łotwie, zbudowana w 1814 roku. Budowa rozpoczęta w 1809, przerwana przez wojny napoleońskie. Charakterystyczna konstrukcja z czerwonej cegły i kamienia o podwójnym cylindrycznym kształcie.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ovisi_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.416, 57.208]
+      },
+      "properties": {
+        "id": "lv-uzava",
+        "name": "Užava",
+        "nameLocal": "Užavas bāka",
+        "country": "LV",
+        "region": "Ventspils",
+        "yearBuilt": 1879,
+        "heightM": 19.0,
+        "focalHeightM": 44.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl W 4s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "LAT-017",
+        "description": "Romantyczna latarnia położona na wydmie Teniroka (28m wysokości) około 20 km na południe od Ventspils. Odnowiona w 1925 po zniszczeniach I wojny światowej. Zabytek kultury.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/U%C5%BEava_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.057, 56.832]
+      },
+      "properties": {
+        "id": "lv-akmenrags",
+        "name": "Akmeņrags",
+        "nameLocal": "Akmeņraga bāka",
+        "country": "LV",
+        "region": "Liepāja",
+        "yearBuilt": 1868,
+        "heightM": 38.0,
+        "focalHeightM": 38.0,
+        "rangeNm": 18,
+        "lightCharacter": "Fl(3) W 15s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "LAT-002",
+        "description": "Najbardziej oddalona od miast latarnia na Łotwie, około 80 km od Ventspils. Materiały do budowy transportowano morzem z Liepāji. Odnowiona w 1957 roku.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Akme%C5%86rags_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.993, 56.517]
+      },
+      "properties": {
+        "id": "lv-liepaja",
+        "name": "Liepāja",
+        "nameLocal": "Liepājas bāka",
+        "country": "LV",
+        "region": "Liepāja",
+        "yearBuilt": 1868,
+        "heightM": 33.0,
+        "focalHeightM": 32.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl(2) W 6s",
+        "lightColor": "white",
+        "construction": "cast iron tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "LAT-011",
+        "description": "Latarnia przy wejściu do portu w Liepāji. Zbudowana z żeliwa pochodzącego z przetopionego wraku statku. Wysokość 33 m.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Liep%C4%81ja_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.124, 57.330]
+      },
+      "properties": {
+        "id": "lv-mersrags",
+        "name": "Mērsrags",
+        "nameLocal": "Mērsraga bāka",
+        "country": "LV",
+        "region": "Talsi",
+        "yearBuilt": 1875,
+        "heightM": 19.0,
+        "focalHeightM": 21.0,
+        "rangeNm": 10,
+        "lightCharacter": "Fl W 5s",
+        "lightColor": "white",
+        "construction": "metal tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "LAT-009",
+        "description": "Latarnia nad Zatoką Ryską w miejscowości Mērsrags. Zbudowana w 1875, przebudowana w 1922 roku.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/M%C4%93rsrags_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.022, 57.054]
+      },
+      "properties": {
+        "id": "lv-daugavgriva",
+        "name": "Daugavgrīva",
+        "nameLocal": "Daugavgrīvas bāka",
+        "country": "LV",
+        "region": "Riga",
+        "yearBuilt": 1957,
+        "heightM": 35.0,
+        "focalHeightM": 36.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl W 2.5s",
+        "lightColor": "white",
+        "construction": "concrete tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "LAT-004",
+        "description": "Latarnia przy ujściu Dźwiny (Daugava) do Zatoki Ryskiej, na przedmieściach Rygi. Zbudowana w okresie radzieckim w 1957 roku.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Daugavgr%C4%ABva_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.200, 58.916]
+      },
+      "properties": {
+        "id": "ee-kopu",
+        "name": "Kõpu",
+        "nameLocal": "Kõpu tuletorn",
+        "country": "EE",
+        "region": "Hiiumaa",
+        "yearBuilt": 1531,
+        "heightM": 37.0,
+        "focalHeightM": 103.0,
+        "rangeNm": 26,
+        "lightCharacter": "Fl W 15s",
+        "lightColor": "white",
+        "construction": "stone tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "EST-023",
+        "description": "Trzecia najstarsza latarnia morska na świecie wciąż działająca. Zbudowana w latach 1504-1531 na wzgórzu Tornimägi (68m npm). Światło widoczne z odległości ponad 50 km. Najstarsza latarnia na Morzu Bałtyckim.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/K%C3%B5pu_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.586, 59.091]
+      },
+      "properties": {
+        "id": "ee-tahkuna",
+        "name": "Tahkuna",
+        "nameLocal": "Tahkuna tuletorn",
+        "country": "EE",
+        "region": "Hiiumaa",
+        "yearBuilt": 1875,
+        "heightM": 43.0,
+        "focalHeightM": 44.0,
+        "rangeNm": 18,
+        "lightCharacter": "Fl(2) W 10s",
+        "lightColor": "white",
+        "construction": "cast iron tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "EST-052",
+        "description": "Najwyższa latarnia w Estonii (42.7m). Żeliwna wieża wyprodukowana w Paryżu w 1871 roku. Położona na północnym cyplu wyspy Hiiumaa.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tahkuna_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.066, 58.938]
+      },
+      "properties": {
+        "id": "ee-ristna",
+        "name": "Ristna",
+        "nameLocal": "Ristna tuletorn",
+        "country": "EE",
+        "region": "Hiiumaa",
+        "yearBuilt": 1874,
+        "heightM": 30.0,
+        "focalHeightM": 38.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl(3) W 15s",
+        "lightColor": "white",
+        "construction": "cast iron tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "EST-037",
+        "description": "Żeliwna latarnia na północno-zachodnim cyplu wyspy Hiiumaa. Wyprodukowana we Francji w 1873 roku. Jedna z czterech żeliwnych latarni w Estonii.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ristna_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.055, 57.910]
+      },
+      "properties": {
+        "id": "ee-sorve",
+        "name": "Sõrve",
+        "nameLocal": "Sõrve tuletorn",
+        "country": "EE",
+        "region": "Saaremaa",
+        "yearBuilt": 1960,
+        "heightM": 48.0,
+        "focalHeightM": 53.0,
+        "rangeNm": 18,
+        "lightCharacter": "Fl(2) W 15s",
+        "lightColor": "white",
+        "construction": "concrete tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "EST-047",
+        "description": "Latarnia na południowym cyplu wyspy Saaremaa. Obecna wieża z 1960 roku zastąpiła latarnię zniszczoną w II wojnie światowej. Ważny punkt nawigacyjny u wejścia do Zatoki Ryskiej.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%B5rve_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.970, 58.097]
+      },
+      "properties": {
+        "id": "ee-kihnu",
+        "name": "Kihnu",
+        "nameLocal": "Kihnu tuletorn",
+        "country": "EE",
+        "region": "Pärnu",
+        "yearBuilt": 1864,
+        "heightM": 29.0,
+        "focalHeightM": 29.0,
+        "rangeNm": 12,
+        "lightCharacter": "Fl W 4s",
+        "lightColor": "white",
+        "construction": "cast iron tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "EST-020",
+        "description": "Żeliwna latarnia na wyspie Kihnu w Zatoce Ryskiej. Wyprodukowana w Anglii w 1864 roku, przetransportowana i zmontowana na miejscu. Jedna z najważniejszych latarni w Estonii.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kihnu_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.036, 59.388]
+      },
+      "properties": {
+        "id": "ee-pakri",
+        "name": "Pakri",
+        "nameLocal": "Pakri tuletorn",
+        "country": "EE",
+        "region": "Harju",
+        "yearBuilt": 1889,
+        "heightM": 52.0,
+        "focalHeightM": 64.0,
+        "rangeNm": 18,
+        "lightCharacter": "Fl(4) W 20s",
+        "lightColor": "white",
+        "construction": "limestone tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "EST-032",
+        "description": "Wapienna latarnia na półwyspie Pakri niedaleko Paldiski. Położona na wysokim klifie. Ważny punkt nawigacyjny na szlaku żeglugowym wzdłuż północnego wybrzeża Estonii.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Pakri_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.813, 58.383]
+      },
+      "properties": {
+        "id": "ee-vilsandi",
+        "name": "Vilsandi",
+        "nameLocal": "Vilsandi tuletorn",
+        "country": "EE",
+        "region": "Saaremaa",
+        "yearBuilt": 1809,
+        "heightM": 37.0,
+        "focalHeightM": 41.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl W 6s",
+        "lightColor": "white",
+        "construction": "stone tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "EST-061",
+        "description": "Najdalej na zachód wysunięta latarnia w Estonii, na wyspie Vilsandi. Zbudowana w 1809 roku. Znajduje się na terenie Parku Narodowego Vilsandi.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Vilsandi_lighthouse"
+      }
     }
   ]
 }
