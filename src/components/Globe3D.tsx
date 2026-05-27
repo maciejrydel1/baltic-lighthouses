@@ -2,7 +2,21 @@
 
 import dynamic from 'next/dynamic';
 import React, { useCallback, useEffect, useState, forwardRef } from 'react';
-import { Lighthouse, LIGHT_COLORS } from '@/types/lighthouse';
+import { Lighthouse, LIGHT_COLORS, LighthouseStatus } from '@/types/lighthouse';
+
+// Kolory markerów w zależności od statusu
+const STATUS_COLORS: Record<LighthouseStatus, string> = {
+  active: '', // użyje koloru światła
+  inactive: '#6b7280', // szary
+  historical: '#92400e', // bursztynowy przygaszony
+};
+
+// Rozmiary markerów
+const STATUS_RADIUS: Record<LighthouseStatus, number> = {
+  active: 0.07,
+  inactive: 0.05,
+  historical: 0.05,
+};
 
 // Wrapper z forwardRef dla dynamicznego importu
 const GlobeWrapper = dynamic(
@@ -113,20 +127,29 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
     // Celowo puste - glob nie obraca się automatycznie
   }, []);
 
-  // Markery
-  const pointsData = lighthouses.map((l) => ({
-    id: l.id,
-    lat: l.coordinates[1],
-    lng: l.coordinates[0],
-    name: l.name,
-    color: LIGHT_COLORS[l.lightColor] || LIGHT_COLORS.white,
-    altitude: 0.005,
-    radius: l.id === selectedId ? 0.12 : 0.07,
-    rangeNm: l.rangeNm,
-    lightColor: l.lightColor,
-    yearBuilt: l.yearBuilt,
-    heightM: l.heightM,
-  }));
+  // Markery - kolor i rozmiar zależą od statusu
+  const pointsData = lighthouses.map((l) => {
+    const isActive = l.status === 'active';
+    const baseColor = isActive
+      ? (LIGHT_COLORS[l.lightColor] || LIGHT_COLORS.white)
+      : STATUS_COLORS[l.status];
+    const baseRadius = STATUS_RADIUS[l.status];
+
+    return {
+      id: l.id,
+      lat: l.coordinates[1],
+      lng: l.coordinates[0],
+      name: l.name,
+      color: baseColor,
+      altitude: isActive ? 0.005 : 0.003, // nieaktywne niżej
+      radius: l.id === selectedId ? 0.12 : baseRadius,
+      rangeNm: l.rangeNm,
+      lightColor: l.lightColor,
+      yearBuilt: l.yearBuilt,
+      heightM: l.heightM,
+      status: l.status,
+    };
+  });
 
   // Pierścienie zasięgu
   const ringsData = selectedId
@@ -160,27 +183,31 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
       pointColor="color"
       pointAltitude="altitude"
       pointRadius="radius"
-      pointLabel={(d: any) => `
-        <div style="
-          background: rgba(10,10,26,0.92);
-          border: 1px solid ${d.color};
-          border-radius: 8px;
-          padding: 10px 14px;
-          font-family: system-ui, -apple-system, sans-serif;
-          color: white;
-          font-size: 13px;
-          line-height: 1.5;
-          max-width: 220px;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-        ">
-          <div style="font-weight:700; color: #f59e0b; font-size:14px; margin-bottom:4px;">${d.name}</div>
-          <div>Światło: <span style="color:${d.color}">●</span> ${d.lightColor}</div>
-          <div>Zasięg: ${d.rangeNm} Mm (~${Math.round(d.rangeNm * 1.852)} km)</div>
-          <div>Wysokość: ${d.heightM} m</div>
-          <div>Rok budowy: ${d.yearBuilt}</div>
-          <div style="margin-top:6px; font-size:11px; color:rgba(255,255,255,0.5)">Kliknij, aby zobaczyć szczegóły</div>
-        </div>
-      `}
+      pointLabel={(d: any) => {
+        const statusLabel = d.status === 'active' ? '🟢 Aktywna' : d.status === 'inactive' ? '⚫ Nieaktywna' : '🟤 Historyczna';
+        return `
+          <div style="
+            background: rgba(10,10,26,0.92);
+            border: 1px solid ${d.color};
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-family: system-ui, -apple-system, sans-serif;
+            color: white;
+            font-size: 13px;
+            line-height: 1.5;
+            max-width: 220px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+          ">
+            <div style="font-weight:700; color: #f59e0b; font-size:14px; margin-bottom:4px;">${d.name}</div>
+            <div style="font-size:11px; margin-bottom:4px;">${statusLabel}</div>
+            <div>Światło: <span style="color:${d.color}">●</span> ${d.lightColor}</div>
+            <div>Zasięg: ${d.rangeNm} Mm (~${Math.round(d.rangeNm * 1.852)} km)</div>
+            <div>Wysokość: ${d.heightM} m</div>
+            <div>Rok budowy: ${d.yearBuilt}</div>
+            <div style="margin-top:6px; font-size:11px; color:rgba(255,255,255,0.5)">Kliknij, aby zobaczyć szczegóły</div>
+          </div>
+        `;
+      }}
       onPointClick={handlePointClick}
       ringsData={ringsData}
       ringLat="lat"

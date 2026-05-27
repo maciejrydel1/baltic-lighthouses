@@ -1,3 +1,6 @@
+// Status latarni
+export type LighthouseStatus = 'active' | 'inactive' | 'historical';
+
 // Interfejs pojedynczej latarni morskiej
 export interface Lighthouse {
   id: string;
@@ -13,7 +16,7 @@ export interface Lighthouse {
   lightCharacter?: string;
   lightColor: 'white' | 'red' | 'green' | 'yellow';
   construction?: string;
-  status: 'active' | 'inactive' | 'historical';
+  status: LighthouseStatus;
   visitable: boolean;
   arlhsCode?: string;
   admiraltyCode?: string;
