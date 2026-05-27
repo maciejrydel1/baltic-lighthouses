@@ -512,6 +512,141 @@
         "imageUrl": null,
         "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Gda%C5%84sk_Port_P%C3%B3%C5%82nocny"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.095, 55.728]
+      },
+      "properties": {
+        "id": "lt-klaipeda",
+        "name": "Klaipėda",
+        "nameLocal": "Klaipėdos švyturys",
+        "country": "LT",
+        "region": "Klaipėda",
+        "yearBuilt": 1953,
+        "heightM": 40.0,
+        "focalHeightM": 44.0,
+        "rangeNm": 15,
+        "lightCharacter": "Iso W 6s",
+        "lightColor": "white",
+        "construction": "concrete tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "LIT-002",
+        "description": "Główna latarnia portu w Kłajpedzie, najwyższa latarnia na Litwie. Zbudowana w 1953 roku z betonu. Znajduje się przy wejściu do portu.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Klaip%C4%97da_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.096, 56.027]
+      },
+      "properties": {
+        "id": "lt-sventoji",
+        "name": "Šventoji",
+        "nameLocal": "Šventosios švyturys",
+        "country": "LT",
+        "region": "Palanga",
+        "yearBuilt": 1957,
+        "heightM": 39.0,
+        "focalHeightM": 42.0,
+        "rangeNm": 18,
+        "lightCharacter": "Fl(3) W 15s",
+        "lightColor": "white",
+        "construction": "concrete tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "LIT-006",
+        "description": "Najbardziej północna latarnia Litwy, położona w kurorcie Šventoji koło Połągi. Charakterystyczna smukła wieża z 1957 roku.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/%C5%A0ventoji_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.995, 55.305]
+      },
+      "properties": {
+        "id": "lt-nida",
+        "name": "Nida",
+        "nameLocal": "Nidos švyturys",
+        "country": "LT",
+        "region": "Neringa",
+        "yearBuilt": 1953,
+        "heightM": 29.0,
+        "focalHeightM": 51.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl(2) W 6s",
+        "lightColor": "white",
+        "construction": "concrete tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "LIT-004",
+        "description": "Latarnia na Mierzei Kurońskiej w miejscowości Nida. Położona na wysokiej wydmie, dzięki czemu światło widoczne jest z dużej odległości.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Nida_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.116, 55.556]
+      },
+      "properties": {
+        "id": "lt-juodkrante",
+        "name": "Juodkrantė",
+        "nameLocal": "Juodkrantės švyturys",
+        "country": "LT",
+        "region": "Neringa",
+        "yearBuilt": 1950,
+        "heightM": 20.0,
+        "focalHeightM": 24.0,
+        "rangeNm": 12,
+        "lightCharacter": "Fl W 8s",
+        "lightColor": "white",
+        "construction": "concrete tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "LIT-001",
+        "description": "Latarnia na Mierzei Kurońskiej w miejscowości Juodkrantė. Zbudowana w 1950 roku, zastąpiła wcześniejszą latarnię zniszczoną podczas II wojny światowej.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Juodkrant%C4%97_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.190, 55.341]
+      },
+      "properties": {
+        "id": "lt-ventes-ragas",
+        "name": "Ventės Ragas",
+        "nameLocal": "Ventės Rago švyturys",
+        "country": "LT",
+        "region": "Šilutė",
+        "yearBuilt": 1860,
+        "heightM": 11.0,
+        "focalHeightM": 14.0,
+        "rangeNm": 8,
+        "lightCharacter": "F W",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "LIT-008",
+        "description": "Najstarsza latarnia na Litwie, zbudowana w 1860 roku na cyplu Ventės Ragas nad Zalewem Kurońskim. Przy latarni znajduje się stacja ornitologiczna.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Vent%C4%97s_Ragas_Lighthouse"
+      }
     }
   ]
 }
