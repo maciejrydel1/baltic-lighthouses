@@ -483,6 +483,35 @@
         "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Krynica_Morska",
         "visitorsPerYear": 56000
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.6964,
+          54.3998
+        ]
+      },
+      "properties": {
+        "id": "pl-gdansk-port-polnocny",
+        "name": "Gdańsk Port Północny",
+        "nameLocal": "Latarnia Morska Gdańsk Port Północny",
+        "country": "PL",
+        "region": "Pomerania",
+        "yearBuilt": 1984,
+        "heightM": 64.3,
+        "focalHeightM": 61.0,
+        "rangeNm": 25,
+        "lightCharacter": "Fl(2) W 9s",
+        "lightColor": "white",
+        "construction": "concrete tower with radar",
+        "status": "active",
+        "visitable": false,
+        "description": "Najbardziej 'kosmiczna' wśród polskich latarni, z wyglądu przypominająca lotniskową wieżę kontroli lotów. Jedyna latarnia w Polsce posiadająca windę. W budynku działa kapitanat Portu Północnego. Uruchomienie w 1984 r. zakończyło eksploatację latarni Nowy Port. Całkowicie zamknięta dla turystów.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Gda%C5%84sk_Port_P%C3%B3%C5%82nocny"
+      }
     }
   ]
 }
