@@ -60,7 +60,7 @@ export function LighthousePanel({ lighthouse, onClose }: LighthousePanelProps) {
           </div>
 
           {/* Zdjęcie */}
-          <LighthouseImage name={lighthouse.name} imageUrl={lighthouse.imageUrl} />
+          <LighthouseImage id={lighthouse.id} name={lighthouse.name} imageUrl={lighthouse.imageUrl} />
 
           {/* Opis */}
           {lighthouse.description && (
@@ -189,11 +189,16 @@ function DetailRow({ label, value }: { label: string; value: string }) {
   );
 }
 
-// Komponent zdjęcia z obsługą błędów
-function LighthouseImage({ name, imageUrl }: { name: string; imageUrl?: string | null }) {
-  const [error, setError] = useState(false);
+// Komponent zdjęcia z obsługą lokalnych plików i fallback na Wikimedia
+function LighthouseImage({ id, name, imageUrl }: { id: string; name: string; imageUrl?: string | null }) {
+  const [localError, setLocalError] = useState(false);
+  const [remoteError, setRemoteError] = useState(false);
 
-  if (!imageUrl || error) {
+  // Ścieżka do lokalnego zdjęcia (obsługuje .jpg, .jpeg, .png, .webp)
+  const localImageUrl = `/images/lighthouses/${id}.jpg`;
+
+  // Jeśli oba źródła zawiodły - placeholder
+  if (localError && (remoteError || !imageUrl)) {
     return (
       <div className="relative h-52 bg-gradient-to-br from-amber-900/20 to-slate-900/40 flex items-center justify-center">
         <div className="text-center">
@@ -205,14 +210,23 @@ function LighthouseImage({ name, imageUrl }: { name: string; imageUrl?: string |
     );
   }
 
+  // Próbuj najpierw lokalne zdjęcie, potem Wikimedia
+  const currentSrc = !localError ? localImageUrl : imageUrl;
+
   return (
     <div className="relative h-52 overflow-hidden">
       <img
-        src={imageUrl}
+        src={currentSrc || ''}
         alt={name}
         className="w-full h-full object-cover"
         loading="lazy"
-        onError={() => setError(true)}
+        onError={() => {
+          if (!localError) {
+            setLocalError(true);
+          } else {
+            setRemoteError(true);
+          }
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f23] via-transparent to-transparent" />
     </div>
