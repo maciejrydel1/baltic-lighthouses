@@ -1025,6 +1025,195 @@
         "imageUrl": null,
         "wikipediaUrl": "https://en.wikipedia.org/wiki/Vilsandi_lighthouse"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.980, 54.960]
+      },
+      "properties": {
+        "id": "ru-taran",
+        "name": "Mys Taran",
+        "nameLocal": "Маяк Тарханкут / Brüsterort",
+        "country": "RU",
+        "region": "Kaliningrad Oblast",
+        "yearBuilt": 1846,
+        "heightM": 29.0,
+        "focalHeightM": 54.0,
+        "rangeNm": 17,
+        "lightCharacter": "Fl W 4s",
+        "lightColor": "white",
+        "construction": "octagonal red brick tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "KAL-001",
+        "description": "Najbardziej znana latarnia Obwodu Kaliningradzkiego, położona na przylądku Taran (dawniej Brüsterort). Ośmiokątna wieża z czerwonej cegły z 1846 roku. Znajduje się w zamkniętej strefie wojskowej.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cape_Taran_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.897, 54.645]
+      },
+      "properties": {
+        "id": "ru-baltiysk",
+        "name": "Baltiysk",
+        "nameLocal": "Балтийский маяк / Pillau",
+        "country": "RU",
+        "region": "Kaliningrad Oblast",
+        "yearBuilt": 1813,
+        "heightM": 33.0,
+        "focalHeightM": 34.0,
+        "rangeNm": 16,
+        "lightCharacter": "Fl(3) W 9s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "KAL-003",
+        "description": "Najdalej na zachód wysunięta latarnia Rosji. Zbudowana w latach 1813-1816 w miejscu wcześniejszej latarni z 1741 roku. Świeci nad wejściem do Cieśniny Piławskiej i bazy Floty Bałtyckiej.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Baltiysk_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.968, 55.280]
+      },
+      "properties": {
+        "id": "ru-lesnoy",
+        "name": "Lesnoy",
+        "nameLocal": "Лесной маяк",
+        "country": "RU",
+        "region": "Kaliningrad Oblast",
+        "yearBuilt": 1953,
+        "heightM": 40.0,
+        "focalHeightM": 71.0,
+        "rangeNm": 18,
+        "lightCharacter": "Fl(2) W 12s",
+        "lightColor": "white",
+        "construction": "concrete tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "KAL-006",
+        "description": "Latarnia na rosyjskiej części Mierzei Kurońskiej, najwyższa w Obwodzie Kaliningradzkim. Położona na wysokiej wydmie, dzięki czemu światło znajduje się 71 m nad poziomem morza.",
+        "imageUrl": null,
+        "wikipediaUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.067, 55.272]
+      },
+      "properties": {
+        "id": "ru-zalivino",
+        "name": "Zalivino",
+        "nameLocal": "Заливино маяк / Rybatschi",
+        "country": "RU",
+        "region": "Kaliningrad Oblast",
+        "yearBuilt": 1889,
+        "heightM": 15.0,
+        "focalHeightM": 18.0,
+        "rangeNm": 8,
+        "lightCharacter": "Fl W 3s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "KAL-010",
+        "description": "Niewielka latarnia na rosyjskiej części Mierzei Kurońskiej, pierwotnie zbudowana w 1889 roku jako niemiecka Rossitten. Reaktywowana w 2021 roku po okresie nieaktywności.",
+        "imageUrl": null,
+        "wikipediaUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.542, 60.042]
+      },
+      "properties": {
+        "id": "ru-tolbukhin",
+        "name": "Tolbukhin",
+        "nameLocal": "Толбухин маяк",
+        "country": "RU",
+        "region": "St. Petersburg",
+        "yearBuilt": 1719,
+        "heightM": 29.0,
+        "focalHeightM": 30.0,
+        "rangeNm": 19,
+        "lightCharacter": "Fl(2) W 10s",
+        "lightColor": "white",
+        "construction": "stone tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "RUS-053",
+        "description": "Najstarsza latarnia morska w Rosji! Zbudowana w 1719 roku z rozkazu Piotra I Wielkiego na sztucznej wyspie 5 km od Kronsztadu. Obecna kamienna wieża z 1810 roku. Obiekt UNESCO.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tolbukhin_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.122, 59.982]
+      },
+      "properties": {
+        "id": "ru-shepelevsky",
+        "name": "Shepelevsky",
+        "nameLocal": "Шепелёвский маяк",
+        "country": "RU",
+        "region": "Leningrad Oblast",
+        "yearBuilt": 1910,
+        "heightM": 24.0,
+        "focalHeightM": 25.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl(2) R/W 6s",
+        "lightColor": "red-white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "RUS-048",
+        "description": "Charakterystyczna czerwono-biała latarnia z 1910 roku, położona 70 km od Petersburga. Wyprodukowana we Francji. Emituje zarówno białe jak i czerwone światło sektorowe.",
+        "imageUrl": null,
+        "wikipediaUrl": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.010, 60.115]
+      },
+      "properties": {
+        "id": "ru-stirsudden",
+        "name": "Stirsudden",
+        "nameLocal": "Стирсудден маяк",
+        "country": "RU",
+        "region": "Leningrad Oblast",
+        "yearBuilt": 1873,
+        "heightM": 27.0,
+        "focalHeightM": 74.0,
+        "rangeNm": 21,
+        "lightCharacter": "Fl(3) W 20s",
+        "lightColor": "white",
+        "construction": "cast iron tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "RUS-050",
+        "description": "Fotogeniczna czerwono-biała żeliwna wieża z 1873 roku na wysokim brzegu Zatoki Fińskiej. Położona na terenie aktywnej bazy wojskowej, niedostępna dla turystów. Najwyżej położone światło w regionie (74m npm).",
+        "imageUrl": null,
+        "wikipediaUrl": null
+      }
     }
   ]
 }
