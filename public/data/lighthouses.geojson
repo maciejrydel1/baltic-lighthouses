@@ -1214,6 +1214,330 @@
         "imageUrl": null,
         "wikipediaUrl": null
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.347, 59.504]
+      },
+      "properties": {
+        "id": "fi-bogskar",
+        "name": "Bogskär",
+        "nameLocal": "Bogskärin majakka",
+        "country": "FI",
+        "region": "Åland",
+        "yearBuilt": 1882,
+        "heightM": 25.0,
+        "focalHeightM": 28.0,
+        "rangeNm": 14,
+        "lightCharacter": "Fl(3) W 20s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "FIN-006",
+        "description": "Najbardziej na południe wysunięta latarnia Finlandii, na skalistej wysepce Bogskär. Zbudowana w 1882 roku z inicjatywy Szwecji. Czerwona 25-metrowa wieża z siedmioma piętrami. Zautomatyzowana w 1969.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bogsk%C3%A4r_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.501, 59.823]
+      },
+      "properties": {
+        "id": "fi-bengtskar",
+        "name": "Bengtskär",
+        "nameLocal": "Bengtskärin majakka",
+        "country": "FI",
+        "region": "Southwest Finland",
+        "yearBuilt": 1906,
+        "heightM": 52.0,
+        "focalHeightM": 51.0,
+        "rangeNm": 26,
+        "lightCharacter": "Fl W 20s",
+        "lightColor": "white",
+        "construction": "granite tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "FIN-004",
+        "description": "Najwyższa latarnia w krajach nordyckich! Granitowa wieża z 1906 roku, wznosi się 52 m nad poziom morza. Słynna z bitwy w 1941 roku podczas wojny kontynuacyjnej. Obecnie hotel i muzeum, ~15 000 odwiedzających rocznie.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bengtsk%C3%A4r_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.370, 59.779]
+      },
+      "properties": {
+        "id": "fi-uto",
+        "name": "Utö",
+        "nameLocal": "Utön majakka",
+        "country": "FI",
+        "region": "Southwest Finland",
+        "yearBuilt": 1814,
+        "heightM": 24.0,
+        "focalHeightM": 35.0,
+        "rangeNm": 15,
+        "lightCharacter": "LFl W 20s",
+        "lightColor": "white",
+        "construction": "stone tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "FIN-064",
+        "description": "Najstarsza działająca latarnia w Finlandii! Pierwsza latarnia powstała tu w 1753 roku. Obecna wieża z 1814 roku. Unikalna kaplica na trzecim piętrze - prawdopodobnie jedyna latarnia-kościół na świecie.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ut%C3%B6_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.131, 60.301]
+      },
+      "properties": {
+        "id": "fi-market",
+        "name": "Märket",
+        "nameLocal": "Märketin majakka",
+        "country": "FI",
+        "region": "Åland",
+        "yearBuilt": 1885,
+        "heightM": 14.0,
+        "focalHeightM": 17.0,
+        "rangeNm": 10,
+        "lightCharacter": "Fl W 5s",
+        "lightColor": "white",
+        "construction": "iron tower",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "FIN-032",
+        "description": "Latarnia na granicy Finlandii i Szwecji! Wyspa Märket została podzielona zygzakowatą linią graniczną w 1985 roku, by latarnia (zbudowana przez Finlandię na szwedzkiej stronie) znalazła się w Finlandii. Zautomatyzowana w 1979.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/M%C3%A4rket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.303, 59.869]
+      },
+      "properties": {
+        "id": "fi-porkkala",
+        "name": "Porkkala",
+        "nameLocal": "Porkkalan majakka",
+        "country": "FI",
+        "region": "Uusimaa",
+        "yearBuilt": 1920,
+        "heightM": 20.0,
+        "focalHeightM": 26.0,
+        "rangeNm": 12,
+        "lightCharacter": "Fl(4) W 20s",
+        "lightColor": "white",
+        "construction": "brick tower on concrete base",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "FIN-044",
+        "description": "Latarnia na półwyspie Porkkala, 9 km od brzegu. Zbudowana w 1920 roku na masywnym betonowym fundamencie. W latach 1944-1956 na terytorium radzieckiej bazy wojskowej.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Porkkala_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.975, 60.103]
+      },
+      "properties": {
+        "id": "fi-harmaja",
+        "name": "Harmaja",
+        "nameLocal": "Harmajan majakka",
+        "country": "FI",
+        "region": "Helsinki",
+        "yearBuilt": 1883,
+        "heightM": 15.0,
+        "focalHeightM": 16.0,
+        "rangeNm": 12,
+        "lightCharacter": "Fl(2) W 12s",
+        "lightColor": "white",
+        "construction": "brick tower on granite base",
+        "status": "active",
+        "visitable": false,
+        "arlhsCode": "FIN-015",
+        "description": "Ikona Helsinek - najbardziej rozpoznawalna latarnia fińska. Pierwsza wieża z 1883 (7.3m), rozbudowana w 1900 do obecnej wysokości. Widoczna z promów i statków wycieczkowych.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Harmaja"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [25.413, 60.108]
+      },
+      "properties": {
+        "id": "fi-soderskar",
+        "name": "Söderskär",
+        "nameLocal": "Söderskärin majakka",
+        "country": "FI",
+        "region": "Uusimaa",
+        "yearBuilt": 1862,
+        "heightM": 32.5,
+        "focalHeightM": 40.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl W 5s",
+        "lightColor": "white",
+        "construction": "granite and brick tower",
+        "status": "inactive",
+        "visitable": true,
+        "arlhsCode": "FIN-056",
+        "description": "Historyczna latarnia 150-letnia, wycofana z użytku w 1989 roku. Granitowa podstawa (8.6m), reszta z cegły. Obecnie na terenie rezerwatu przyrody, popularne rejsy z Helsinek.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%B6dersk%C3%A4r_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012, 60.718]
+      },
+      "properties": {
+        "id": "fi-isokari",
+        "name": "Isokari",
+        "nameLocal": "Isokarin majakka",
+        "country": "FI",
+        "region": "Southwest Finland",
+        "yearBuilt": 1833,
+        "heightM": 49.0,
+        "focalHeightM": 50.0,
+        "rangeNm": 18,
+        "lightCharacter": "Fl W 5s",
+        "lightColor": "white",
+        "construction": "stone tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "FIN-022",
+        "description": "Najwyższa latarnia w Zatoce Botnickiej i druga najwyższa w Finlandii (49m). Zbudowana w 1833 roku. Na wyspie działa hotel i restauracja. Popularny cel wycieczek.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Isokari_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.303, 61.144]
+      },
+      "properties": {
+        "id": "fi-kylmapihlaja",
+        "name": "Kylmäpihlaja",
+        "nameLocal": "Kylmäpihlajan majakka",
+        "country": "FI",
+        "region": "Satakunta",
+        "yearBuilt": 1953,
+        "heightM": 32.0,
+        "focalHeightM": 36.0,
+        "rangeNm": 12,
+        "lightCharacter": "Fl(3) W 20s",
+        "lightColor": "white",
+        "construction": "concrete tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "FIN-028",
+        "description": "Latarnia przekształcona w hotel i restaurację. Betonowa wieża z 1953 roku na wyspie Kylmäpihlaja. Możliwość noclegu w pokojach z widokiem na morze. Rejsy z Rauma.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kylm%C3%A4pihlaja_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.348, 61.477]
+      },
+      "properties": {
+        "id": "fi-sappi",
+        "name": "Säppi",
+        "nameLocal": "Säpin majakka",
+        "country": "FI",
+        "region": "Satakunta",
+        "yearBuilt": 1873,
+        "heightM": 28.0,
+        "focalHeightM": 32.0,
+        "rangeNm": 15,
+        "lightCharacter": "Fl(2) W 15s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "FIN-050",
+        "description": "Biała 28-metrowa latarnia na wyspie Säppi, nazywanej 'Islandią Finlandii'. Zaprojektowana przez Axela Hampusa Dalströma, uruchomiona w 1873. Stacja pilotów.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%A4ppi_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.852, 63.948]
+      },
+      "properties": {
+        "id": "fi-tankar",
+        "name": "Tankar",
+        "nameLocal": "Tankarin majakka",
+        "country": "FI",
+        "region": "Central Ostrobothnia",
+        "yearBuilt": 1889,
+        "heightM": 27.5,
+        "focalHeightM": 28.0,
+        "rangeNm": 13,
+        "lightCharacter": "Fl W 4s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "FIN-060",
+        "description": "Popularna latarnia turystyczna na wyspie Tankar koło Kokkoli. Zbudowana w 1889, 122 schody prowadzące na szczyt. Na wyspie kaplica z 1754 i muzeum fok.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tankar_Lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.561, 65.040]
+      },
+      "properties": {
+        "id": "fi-marjaniemi",
+        "name": "Marjaniemi",
+        "nameLocal": "Marjaniemen majakka",
+        "country": "FI",
+        "region": "Northern Ostrobothnia",
+        "yearBuilt": 1871,
+        "heightM": 25.0,
+        "focalHeightM": 26.0,
+        "rangeNm": 14,
+        "lightCharacter": "LFl W 6s",
+        "lightColor": "white",
+        "construction": "brick tower",
+        "status": "active",
+        "visitable": true,
+        "arlhsCode": "FIN-030",
+        "description": "Najdalej na północ wysunięta latarnia w zestawieniu, na wyspie Hailuoto. Ceglana wieża z 1871 roku zaprojektowana przez Axela Hampusa Dahlströma. Dostępna drogą lądową przez prom na Hailuoto.",
+        "imageUrl": null,
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Marjaniemi_Lighthouse"
+      }
     }
   ]
 }

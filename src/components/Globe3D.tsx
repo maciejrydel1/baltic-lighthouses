@@ -49,6 +49,7 @@ interface Globe3DProps {
 export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
   const [globeEl, setGlobeEl] = useState<any>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const updateSize = () => {
@@ -57,9 +58,21 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
         height: window.innerHeight,
       });
     };
+    // Wykryj urządzenie mobilne (szerokość < 768px lub touch device)
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 768 ||
+        ('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0);
+      setIsMobile(mobile);
+    };
     updateSize();
+    checkMobile();
     window.addEventListener('resize', updateSize);
-    return () => window.removeEventListener('resize', updateSize);
+    window.addEventListener('resize', checkMobile);
+    return () => {
+      window.removeEventListener('resize', updateSize);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   // Callback do otrzymania ref
@@ -172,7 +185,7 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
       onGlobeRef={handleGlobeRef}
       width={dimensions.width}
       height={dimensions.height}
-      globeImageUrl="/textures/earth-21k.jpg"
+      globeImageUrl={isMobile ? "/textures/earth-blue-marble.jpg" : "/textures/earth-21k.jpg"}
       bumpImageUrl="/textures/earth-topology.png"
       backgroundImageUrl="/textures/night-sky.png"
       atmosphereColor="#4a90d9"
