@@ -60,7 +60,12 @@ export function LighthousePanel({ lighthouse, onClose }: LighthousePanelProps) {
           </div>
 
           {/* Zdjęcie */}
-          <LighthouseImage id={lighthouse.id} name={lighthouse.name} imageUrl={lighthouse.imageUrl} />
+          <LighthouseImage
+            key={lighthouse.id}
+            id={lighthouse.id}
+            name={lighthouse.name}
+            imageUrl={lighthouse.imageUrl}
+          />
 
           {/* Opis */}
           {lighthouse.description && (
@@ -219,7 +224,7 @@ function LighthouseImage({ id, name, imageUrl }: { id: string; name: string; ima
         src={currentSrc || ''}
         alt={name}
         className="w-full h-full object-contain bg-black/50"
-        loading="lazy"
+        loading="eager"
         onError={() => {
           if (!localError) {
             setLocalError(true);
