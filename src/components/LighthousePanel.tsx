@@ -52,10 +52,12 @@ export function LighthousePanel({ lighthouse, onClose }: LighthousePanelProps) {
               </div>
             </div>
             <button
+              type="button"
               onClick={onClose}
-              className="p-2 rounded-lg hover:bg-white/10 transition text-white/50 hover:text-white"
+              aria-label="Zamknij panel"
+              className="relative z-50 p-2 rounded-lg hover:bg-white/10 transition text-white/50 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-500/50"
             >
-              <X size={20} />
+              <X size={20} aria-hidden="true" />
             </button>
           </div>
 

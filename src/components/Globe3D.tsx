@@ -120,7 +120,7 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
       if (globeEl) {
         globeEl.controls().autoRotate = false;
         globeEl.pointOfView(
-          { lat: 59.5, lng: 17, altitude: 0.35 },  // Tallinn na środku
+          { lat: 59.5, lng: 17, altitude: 1.2 },  // Tallinn na środku
           2500
         );
       }
@@ -128,24 +128,6 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
 
     return () => clearTimeout(timer);
   }, [globeEl]);
-
-  // Zoom po wybraniu latarni
-  useEffect(() => {
-    if (selectedId && globeEl) {
-      const lighthouse = lighthouses.find((l) => l.id === selectedId);
-      if (lighthouse) {
-        globeEl.controls().autoRotate = false;
-        globeEl.pointOfView(
-          {
-            lat: lighthouse.coordinates[1],
-            lng: lighthouse.coordinates[0],
-            altitude: 0.4,
-          },
-          1500
-        );
-      }
-    }
-  }, [selectedId, lighthouses, globeEl]);
 
   const handlePointClick = useCallback(
     (point: PointData) => {
