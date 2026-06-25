@@ -120,7 +120,7 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
       if (globeEl) {
         globeEl.controls().autoRotate = false;
         globeEl.pointOfView(
-          { lat: 59.5, lng: 17, altitude: 1.2 },  // Tallinn na środku
+          { lat: 59.5, lng: 17, altitude: 1.15 },  // Tallinn na środku, blisko powierzchni
           2500
         );
       }
