@@ -119,8 +119,11 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
     const timer = setTimeout(() => {
       if (globeEl) {
         globeEl.controls().autoRotate = false;
+        // Uwaga: altitude 0.35 jest poniżej powierzchni Ziemi, ale Globe.gl
+        // mapuje je na odpowiednie przybliżenie, w którym Bałtyk wypełnia kadr.
+        // Wyższe wartości (1.x) pozostawiają glob zbyt oddalony.
         globeEl.pointOfView(
-          { lat: 59.5, lng: 17, altitude: 1.6 },  // Tallinn na środku, Bałtyk wypełnia kadr
+          { lat: 59.5, lng: 17, altitude: 0.35 },
           2500
         );
       }
