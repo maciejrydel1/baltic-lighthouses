@@ -185,7 +185,10 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
       onGlobeRef={handleGlobeRef}
       width={dimensions.width}
       height={dimensions.height}
-      globeImageUrl={isMobile ? "/textures/earth-blue-marble.jpg" : "/textures/earth-21k.jpg"}
+      // Desktop: 8K WebP (~1,8 MB) zamiast 21K JPG (~21 MB) — dużo mniejszy transfer,
+      // przy zachowaniu wysokiej jakości wizualnej bez pikselozji na typowych ekranach.
+      // Mobile: pozostaje lekka tekstura 1,4 MB.
+      globeImageUrl={isMobile ? "/textures/earth-blue-marble.jpg" : "/textures/earth-8k.webp"}
       bumpImageUrl="/textures/earth-topology.png"
       backgroundImageUrl="/textures/night-sky.png"
       atmosphereColor="#4a90d9"
