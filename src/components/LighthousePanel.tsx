@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { Lighthouse, COUNTRY_NAMES } from '@/types/lighthouse';
 import { X, MapPin, Calendar, Ruler, Sun, Eye, ExternalLink, Navigation, ImageOff } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,6 +12,27 @@ interface LighthousePanelProps {
 }
 
 export function LighthousePanel({ lighthouse, onClose }: LighthousePanelProps) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Zamykanie klawiszem Esc
+  useEffect(() => {
+    if (!lighthouse) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lighthouse, onClose]);
+
+  // Przeniesienie focusu na przycisk zamykania przy otwarciu panelu
+  useEffect(() => {
+    closeButtonRef.current?.focus();
+  }, [lighthouse?.id]);
+
   return (
     <AnimatePresence>
       {lighthouse && (
@@ -19,14 +41,19 @@ export function LighthousePanel({ lighthouse, onClose }: LighthousePanelProps) {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 400, opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="lighthouse-panel-title"
           className="fixed right-0 top-0 h-full w-full sm:w-96 z-50
                      bg-[#0f0f23]/95 backdrop-blur-xl border-l border-amber-500/20
-                     overflow-y-auto"
+                     overflow-y-auto outline-none"
         >
           {/* Header z przyciskiem zamknij */}
           <div className="sticky top-0 bg-[#0f0f23]/90 backdrop-blur-sm p-4 flex justify-between items-start border-b border-white/10">
             <div>
-              <h2 className="text-xl font-bold text-amber-400">{lighthouse.name}</h2>
+              <h2 id="lighthouse-panel-title" className="text-xl font-bold text-amber-400">
+                {lighthouse.name}
+              </h2>
               {lighthouse.nameLocal && (
                 <p className="text-sm text-white/50 mt-0.5">{lighthouse.nameLocal}</p>
               )}
@@ -52,6 +79,7 @@ export function LighthousePanel({ lighthouse, onClose }: LighthousePanelProps) {
               </div>
             </div>
             <button
+              ref={closeButtonRef}
               type="button"
               onClick={onClose}
               aria-label="Zamknij panel"
@@ -201,7 +229,7 @@ function LighthouseImage({ id, name, imageUrl }: { id: string; name: string; ima
   const [localError, setLocalError] = useState(false);
   const [remoteError, setRemoteError] = useState(false);
 
-  // Ścieżka do lokalnego zdjęcia (obsługuje .jpg, .jpeg, .png, .webp)
+  // Ścieżka do lokalnego zdjęcia
   const localImageUrl = `/images/lighthouses/${id}.jpg`;
 
   // Jeśli oba źródła zawiodły - placeholder
@@ -218,15 +246,17 @@ function LighthouseImage({ id, name, imageUrl }: { id: string; name: string; ima
   }
 
   // Próbuj najpierw lokalne zdjęcie, potem Wikimedia
-  const currentSrc = !localError ? localImageUrl : imageUrl;
+  const currentSrc = !localError ? localImageUrl : imageUrl!;
 
   return (
-    <div className="relative h-52 overflow-hidden">
-      <img
-        src={currentSrc || ''}
+    <div className="relative h-52 overflow-hidden bg-black/50">
+      <Image
+        src={currentSrc}
         alt={name}
-        className="w-full h-full object-contain bg-black/50"
-        loading="eager"
+        fill
+        sizes="(max-width: 640px) 100vw, 384px"
+        priority
+        className="object-contain"
         onError={() => {
           if (!localError) {
             setLocalError(true);
