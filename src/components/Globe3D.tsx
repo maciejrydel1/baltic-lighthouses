@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import React, { useCallback, useEffect, useMemo, useState, forwardRef } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState, forwardRef } from 'react';
 import { Lighthouse, LIGHT_COLORS, LighthouseStatus } from '@/types/lighthouse';
 
 // Kolory markerów w zależności od statusu
@@ -74,6 +74,7 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
   const [globeEl, setGlobeEl] = useState<any>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [isMobile, setIsMobile] = useState(false);
+  const introStartedRef = useRef(false);
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout> | null = null;
@@ -108,7 +109,11 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
 
   // Animacja wejściowa do Bałtyku
   useEffect(() => {
-    if (!globeEl) return;
+    if (!globeEl || introStartedRef.current) return;
+
+    // Zabezpieczenie przed podwójnym uruchomieniem w React Strict Mode
+    introStartedRef.current = true;
+    let isMounted = true;
 
     // Ustaw widok z daleka (Afryka)
     globeEl.pointOfView({ lat: 20, lng: 0, altitude: 2.5 }, 0);
@@ -117,7 +122,7 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
 
     // Po chwili animuj do Bałtyku i zatrzymaj
     const timer = setTimeout(() => {
-      if (globeEl) {
+      if (isMounted && globeEl) {
         globeEl.controls().autoRotate = false;
         // Uwaga: altitude 0.35 jest poniżej powierzchni Ziemi, ale Globe.gl
         // mapuje je na odpowiednie przybliżenie, w którym Bałtyk wypełnia kadr.
@@ -129,7 +134,10 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
       }
     }, 1200);
 
-    return () => clearTimeout(timer);
+    return () => {
+      isMounted = false;
+      clearTimeout(timer);
+    };
   }, [globeEl]);
 
   const handlePointClick = useCallback(

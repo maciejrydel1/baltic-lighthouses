@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Wyłącz strict mode — podwójne renderowanie w dev psuje Globe.gl
-  reactStrictMode: false,
+  // Strict Mode włączony — efekty uboczne w Globe3D są zabezpieczone flagami mounted
+  reactStrictMode: true,
   // Zezwól na obrazki z Wikimedia
   images: {
     remotePatterns: [
