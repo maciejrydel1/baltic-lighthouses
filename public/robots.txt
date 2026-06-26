@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://baltic-lighthouses.vercel.app/sitemap.xml
