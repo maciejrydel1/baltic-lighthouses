@@ -2,13 +2,14 @@
   "type": "FeatureCollection",
   "metadata": {
     "title": "Baltic Lighthouses",
-    "description": "Lighthouses of the Baltic Sea - starting with Poland",
-    "version": "1.0.0",
-    "lastUpdated": "2026-02-15",
+    "description": "Lighthouses of the Baltic Sea - 54 lighthouses across 6 countries (PL, FI, EE, LV, LT, RU)",
+    "version": "1.1.0",
+    "lastUpdated": "2026-06-29T21:00:00Z",
     "sources": [
       "OpenStreetMap",
       "ARLHS",
-      "Urząd Morski Gdynia/Szczecin"
+      "Urząd Morski Gdynia/Szczecin",
+      "Wikipedia / Wikidata"
     ]
   },
   "features": [
@@ -510,14 +511,18 @@
         "visitable": false,
         "description": "Najbardziej 'kosmiczna' wśród polskich latarni, z wyglądu przypominająca lotniskową wieżę kontroli lotów. Jedyna latarnia w Polsce posiadająca windę. W budynku działa kapitanat Portu Północnego. Uruchomienie w 1984 r. zakończyło eksploatację latarni Nowy Port. Całkowicie zamknięta dla turystów.",
         "imageUrl": null,
-        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Gda%C5%84sk_Port_P%C3%B3%C5%82nocny"
+        "wikipediaUrl": "https://pl.wikipedia.org/wiki/Latarnia_morska_Gda%C5%84sk_Port_P%C3%B3%C5%82nocny",
+        "admiraltyCode": "C3080.8"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.095, 55.728]
+        "coordinates": [
+          21.095,
+          55.728
+        ]
       },
       "properties": {
         "id": "lt-klaipeda",
@@ -537,14 +542,18 @@
         "arlhsCode": "LIT-002",
         "description": "Główna latarnia portu w Kłajpedzie, najwyższa latarnia na Litwie. Zbudowana w 1953 roku z betonu. Znajduje się przy wejściu do portu.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Klaip%C4%97da_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Klaip%C4%97da_Lighthouse",
+        "admiraltyCode": "C3333"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.096, 56.027]
+        "coordinates": [
+          21.096,
+          56.027
+        ]
       },
       "properties": {
         "id": "lt-sventoji",
@@ -564,14 +573,18 @@
         "arlhsCode": "LIT-006",
         "description": "Najbardziej północna latarnia Litwy, położona w kurorcie Šventoji koło Połągi. Charakterystyczna smukła wieża z 1957 roku.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/%C5%A0ventoji_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/%C5%A0ventoji_Lighthouse",
+        "admiraltyCode": "C3382"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [20.995, 55.305]
+        "coordinates": [
+          20.995,
+          55.305
+        ]
       },
       "properties": {
         "id": "lt-nida",
@@ -591,14 +604,18 @@
         "arlhsCode": "LIT-004",
         "description": "Latarnia na Mierzei Kurońskiej w miejscowości Nida. Położona na wysokiej wydmie, dzięki czemu światło widoczne jest z dużej odległości.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Nida_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Nida_Lighthouse",
+        "admiraltyCode": "C3318"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.116, 55.556]
+        "coordinates": [
+          21.116,
+          55.556
+        ]
       },
       "properties": {
         "id": "lt-juodkrante",
@@ -618,14 +635,18 @@
         "arlhsCode": "LIT-001",
         "description": "Latarnia na Mierzei Kurońskiej w miejscowości Juodkrantė. Zbudowana w 1950 roku, zastąpiła wcześniejszą latarnię zniszczoną podczas II wojny światowej.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Juodkrant%C4%97_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Juodkrant%C4%97_Lighthouse",
+        "admiraltyCode": "C3328"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.190, 55.341]
+        "coordinates": [
+          21.19,
+          55.341
+        ]
       },
       "properties": {
         "id": "lt-ventes-ragas",
@@ -652,7 +673,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [22.634, 57.802]
+        "coordinates": [
+          22.634,
+          57.802
+        ]
       },
       "properties": {
         "id": "lv-kolka",
@@ -672,14 +696,18 @@
         "arlhsCode": "LAT-008",
         "description": "Jedyna latarnia na Łotwie zbudowana na sztucznej wyspie, 5.2 km od brzegu w Cieśninie Irbe. Wyspa została usypana z głazów transportowanych po lodzie w latach 1873-1875. Wieża wykonana w Sankt Petersburgu.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kolka_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kolka_Lighthouse",
+        "admiraltyCode": "C3478"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.717, 57.567]
+        "coordinates": [
+          21.717,
+          57.567
+        ]
       },
       "properties": {
         "id": "lv-ovisi",
@@ -699,14 +727,18 @@
         "arlhsCode": "LAT-013",
         "description": "Najstarsza latarnia na Łotwie, zbudowana w 1814 roku. Budowa rozpoczęta w 1809, przerwana przez wojny napoleońskie. Charakterystyczna konstrukcja z czerwonej cegły i kamienia o podwójnym cylindrycznym kształcie.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ovisi_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ovisi_Lighthouse",
+        "admiraltyCode": "C3474"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.416, 57.208]
+        "coordinates": [
+          21.416,
+          57.208
+        ]
       },
       "properties": {
         "id": "lv-uzava",
@@ -726,14 +758,18 @@
         "arlhsCode": "LAT-017",
         "description": "Romantyczna latarnia położona na wydmie Teniroka (28m wysokości) około 20 km na południe od Ventspils. Odnowiona w 1925 po zniszczeniach I wojny światowej. Zabytek kultury.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/U%C5%BEava_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/U%C5%BEava_Lighthouse",
+        "admiraltyCode": "C3448"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.057, 56.832]
+        "coordinates": [
+          21.057,
+          56.832
+        ]
       },
       "properties": {
         "id": "lv-akmenrags",
@@ -753,14 +789,18 @@
         "arlhsCode": "LAT-002",
         "description": "Najbardziej oddalona od miast latarnia na Łotwie, około 80 km od Ventspils. Materiały do budowy transportowano morzem z Liepāji. Odnowiona w 1957 roku.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Akme%C5%86rags_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Akme%C5%86rags_Lighthouse",
+        "admiraltyCode": "C3442"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [20.993, 56.517]
+        "coordinates": [
+          20.993,
+          56.517
+        ]
       },
       "properties": {
         "id": "lv-liepaja",
@@ -780,14 +820,18 @@
         "arlhsCode": "LAT-011",
         "description": "Latarnia przy wejściu do portu w Liepāji. Zbudowana z żeliwa pochodzącego z przetopionego wraku statku. Wysokość 33 m.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Liep%C4%81ja_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Liep%C4%81ja_Lighthouse",
+        "admiraltyCode": "C3396"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [23.124, 57.330]
+        "coordinates": [
+          23.124,
+          57.33
+        ]
       },
       "properties": {
         "id": "lv-mersrags",
@@ -807,14 +851,18 @@
         "arlhsCode": "LAT-009",
         "description": "Latarnia nad Zatoką Ryską w miejscowości Mērsrags. Zbudowana w 1875, przebudowana w 1922 roku.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/M%C4%93rsrags_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/M%C4%93rsrags_Lighthouse",
+        "admiraltyCode": "C3494"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [24.022, 57.054]
+        "coordinates": [
+          24.022,
+          57.054
+        ]
       },
       "properties": {
         "id": "lv-daugavgriva",
@@ -834,14 +882,18 @@
         "arlhsCode": "LAT-004",
         "description": "Latarnia przy ujściu Dźwiny (Daugava) do Zatoki Ryskiej, na przedmieściach Rygi. Zbudowana w okresie radzieckim w 1957 roku.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Daugavgr%C4%ABva_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Daugavgr%C4%ABva_Lighthouse",
+        "admiraltyCode": "C3526"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [22.200, 58.916]
+        "coordinates": [
+          22.2,
+          58.916
+        ]
       },
       "properties": {
         "id": "ee-kopu",
@@ -861,14 +913,18 @@
         "arlhsCode": "EST-023",
         "description": "Trzecia najstarsza latarnia morska na świecie wciąż działająca. Zbudowana w latach 1504-1531 na wzgórzu Tornimägi (68m npm). Światło widoczne z odległości ponad 50 km. Najstarsza latarnia na Morzu Bałtyckim.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/K%C3%B5pu_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/K%C3%B5pu_Lighthouse",
+        "admiraltyCode": "C3746"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [22.586, 59.091]
+        "coordinates": [
+          22.586,
+          59.091
+        ]
       },
       "properties": {
         "id": "ee-tahkuna",
@@ -888,14 +944,18 @@
         "arlhsCode": "EST-052",
         "description": "Najwyższa latarnia w Estonii (42.7m). Żeliwna wieża wyprodukowana w Paryżu w 1871 roku. Położona na północnym cyplu wyspy Hiiumaa.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tahkuna_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tahkuna_Lighthouse",
+        "admiraltyCode": "C3754"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [22.066, 58.938]
+        "coordinates": [
+          22.066,
+          58.938
+        ]
       },
       "properties": {
         "id": "ee-ristna",
@@ -915,14 +975,18 @@
         "arlhsCode": "EST-037",
         "description": "Żeliwna latarnia na północno-zachodnim cyplu wyspy Hiiumaa. Wyprodukowana we Francji w 1873 roku. Jedna z czterech żeliwnych latarni w Estonii.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ristna_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ristna_Lighthouse",
+        "admiraltyCode": "C3744"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [22.055, 57.910]
+        "coordinates": [
+          22.055,
+          57.91
+        ]
       },
       "properties": {
         "id": "ee-sorve",
@@ -942,14 +1006,18 @@
         "arlhsCode": "EST-047",
         "description": "Latarnia na południowym cyplu wyspy Saaremaa. Obecna wieża z 1960 roku zastąpiła latarnię zniszczoną w II wojnie światowej. Ważny punkt nawigacyjny u wejścia do Zatoki Ryskiej.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%B5rve_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%B5rve_Lighthouse",
+        "admiraltyCode": "C3704"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [23.970, 58.097]
+        "coordinates": [
+          23.97,
+          58.097
+        ]
       },
       "properties": {
         "id": "ee-kihnu",
@@ -969,14 +1037,18 @@
         "arlhsCode": "EST-020",
         "description": "Żeliwna latarnia na wyspie Kihnu w Zatoce Ryskiej. Wyprodukowana w Anglii w 1864 roku, przetransportowana i zmontowana na miejscu. Jedna z najważniejszych latarni w Estonii.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kihnu_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kihnu_Lighthouse",
+        "admiraltyCode": "C3596"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [24.036, 59.388]
+        "coordinates": [
+          24.036,
+          59.388
+        ]
       },
       "properties": {
         "id": "ee-pakri",
@@ -996,14 +1068,18 @@
         "arlhsCode": "EST-032",
         "description": "Wapienna latarnia na półwyspie Pakri niedaleko Paldiski. Położona na wysokim klifie. Ważny punkt nawigacyjny na szlaku żeglugowym wzdłuż północnego wybrzeża Estonii.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Pakri_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Pakri_Lighthouse",
+        "admiraltyCode": "C3774"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.813, 58.383]
+        "coordinates": [
+          21.813,
+          58.383
+        ]
       },
       "properties": {
         "id": "ee-vilsandi",
@@ -1023,14 +1099,18 @@
         "arlhsCode": "EST-061",
         "description": "Najdalej na zachód wysunięta latarnia w Estonii, na wyspie Vilsandi. Zbudowana w 1809 roku. Znajduje się na terenie Parku Narodowego Vilsandi.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Vilsandi_lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Vilsandi_lighthouse",
+        "admiraltyCode": "C3714"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.980, 54.960]
+        "coordinates": [
+          19.98,
+          54.96
+        ]
       },
       "properties": {
         "id": "ru-taran",
@@ -1050,14 +1130,18 @@
         "arlhsCode": "KAL-001",
         "description": "Najbardziej znana latarnia Obwodu Kaliningradzkiego, położona na przylądku Taran (dawniej Brüsterort). Ośmiokątna wieża z czerwonej cegły z 1846 roku. Znajduje się w zamkniętej strefie wojskowej.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cape_Taran_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Cape_Taran_Lighthouse",
+        "admiraltyCode": "C3256"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.897, 54.645]
+        "coordinates": [
+          19.897,
+          54.645
+        ]
       },
       "properties": {
         "id": "ru-baltiysk",
@@ -1077,14 +1161,18 @@
         "arlhsCode": "KAL-003",
         "description": "Najdalej na zachód wysunięta latarnia Rosji. Zbudowana w latach 1813-1816 w miejscu wcześniejszej latarni z 1741 roku. Świeci nad wejściem do Cieśniny Piławskiej i bazy Floty Bałtyckiej.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Baltiysk_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Baltiysk_Lighthouse",
+        "admiraltyCode": "C3100"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [20.968, 55.280]
+        "coordinates": [
+          20.968,
+          55.28
+        ]
       },
       "properties": {
         "id": "ru-lesnoy",
@@ -1104,14 +1192,18 @@
         "arlhsCode": "KAL-006",
         "description": "Latarnia na rosyjskiej części Mierzei Kurońskiej, najwyższa w Obwodzie Kaliningradzkim. Położona na wysokiej wydmie, dzięki czemu światło znajduje się 71 m nad poziomem morza.",
         "imageUrl": null,
-        "wikipediaUrl": null
+        "wikipediaUrl": null,
+        "admiraltyCode": "C3270"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.067, 55.272]
+        "coordinates": [
+          21.067,
+          55.272
+        ]
       },
       "properties": {
         "id": "ru-zalivino",
@@ -1138,7 +1230,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [29.542, 60.042]
+        "coordinates": [
+          29.542,
+          60.042
+        ]
       },
       "properties": {
         "id": "ru-tolbukhin",
@@ -1158,14 +1253,18 @@
         "arlhsCode": "RUS-053",
         "description": "Najstarsza latarnia morska w Rosji! Zbudowana w 1719 roku z rozkazu Piotra I Wielkiego na sztucznej wyspie 5 km od Kronsztadu. Obecna kamienna wieża z 1810 roku. Obiekt UNESCO.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tolbukhin_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tolbukhin_Lighthouse",
+        "admiraltyCode": "C4010"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [29.122, 59.982]
+        "coordinates": [
+          29.122,
+          59.982
+        ]
       },
       "properties": {
         "id": "ru-shepelevsky",
@@ -1185,14 +1284,18 @@
         "arlhsCode": "RUS-048",
         "description": "Charakterystyczna czerwono-biała latarnia z 1910 roku, położona 70 km od Petersburga. Wyprodukowana we Francji. Emituje zarówno białe jak i czerwone światło sektorowe.",
         "imageUrl": null,
-        "wikipediaUrl": null
+        "wikipediaUrl": null,
+        "admiraltyCode": "C4004"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [29.010, 60.115]
+        "coordinates": [
+          29.01,
+          60.115
+        ]
       },
       "properties": {
         "id": "ru-stirsudden",
@@ -1212,14 +1315,18 @@
         "arlhsCode": "RUS-050",
         "description": "Fotogeniczna czerwono-biała żeliwna wieża z 1873 roku na wysokim brzegu Zatoki Fińskiej. Położona na terenie aktywnej bazy wojskowej, niedostępna dla turystów. Najwyżej położone światło w regionie (74m npm).",
         "imageUrl": null,
-        "wikipediaUrl": null
+        "wikipediaUrl": null,
+        "admiraltyCode": "C5584"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [20.347, 59.504]
+        "coordinates": [
+          20.347,
+          59.504
+        ]
       },
       "properties": {
         "id": "fi-bogskar",
@@ -1239,14 +1346,18 @@
         "arlhsCode": "FIN-006",
         "description": "Najbardziej na południe wysunięta latarnia Finlandii, na skalistej wysepce Bogskär. Zbudowana w 1882 roku z inicjatywy Szwecji. Czerwona 25-metrowa wieża z siedmioma piętrami. Zautomatyzowana w 1969.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bogsk%C3%A4r_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bogsk%C3%A4r_Lighthouse",
+        "admiraltyCode": "C4486"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [22.501, 59.823]
+        "coordinates": [
+          22.501,
+          59.823
+        ]
       },
       "properties": {
         "id": "fi-bengtskar",
@@ -1266,14 +1377,18 @@
         "arlhsCode": "FIN-004",
         "description": "Najwyższa latarnia w krajach nordyckich! Granitowa wieża z 1906 roku, wznosi się 52 m nad poziom morza. Słynna z bitwy w 1941 roku podczas wojny kontynuacyjnej. Obecnie hotel i muzeum, ~15 000 odwiedzających rocznie.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bengtsk%C3%A4r_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Bengtsk%C3%A4r_Lighthouse",
+        "admiraltyCode": "C4906"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.370, 59.779]
+        "coordinates": [
+          21.37,
+          59.779
+        ]
       },
       "properties": {
         "id": "fi-uto",
@@ -1293,14 +1408,18 @@
         "arlhsCode": "FIN-064",
         "description": "Najstarsza działająca latarnia w Finlandii! Pierwsza latarnia powstała tu w 1753 roku. Obecna wieża z 1814 roku. Unikalna kaplica na trzecim piętrze - prawdopodobnie jedyna latarnia-kościół na świecie.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ut%C3%B6_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Ut%C3%B6_Lighthouse",
+        "admiraltyCode": "C4736"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [19.131, 60.301]
+        "coordinates": [
+          19.131,
+          60.301
+        ]
       },
       "properties": {
         "id": "fi-market",
@@ -1320,14 +1439,18 @@
         "arlhsCode": "FIN-032",
         "description": "Latarnia na granicy Finlandii i Szwecji! Wyspa Märket została podzielona zygzakowatą linią graniczną w 1985 roku, by latarnia (zbudowana przez Finlandię na szwedzkiej stronie) znalazła się w Finlandii. Zautomatyzowana w 1979.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/M%C3%A4rket"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/M%C3%A4rket",
+        "admiraltyCode": "C4472"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [24.303, 59.869]
+        "coordinates": [
+          24.303,
+          59.869
+        ]
       },
       "properties": {
         "id": "fi-porkkala",
@@ -1347,14 +1470,18 @@
         "arlhsCode": "FIN-044",
         "description": "Latarnia na półwyspie Porkkala, 9 km od brzegu. Zbudowana w 1920 roku na masywnym betonowym fundamencie. W latach 1944-1956 na terytorium radzieckiej bazy wojskowej.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Porkkala_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Porkkala_Lighthouse",
+        "admiraltyCode": "C5130"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [24.975, 60.103]
+        "coordinates": [
+          24.975,
+          60.103
+        ]
       },
       "properties": {
         "id": "fi-harmaja",
@@ -1374,14 +1501,18 @@
         "arlhsCode": "FIN-015",
         "description": "Ikona Helsinek - najbardziej rozpoznawalna latarnia fińska. Pierwsza wieża z 1883 (7.3m), rozbudowana w 1900 do obecnej wysokości. Widoczna z promów i statków wycieczkowych.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Harmaja"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Harmaja",
+        "admiraltyCode": "C5190"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [25.413, 60.108]
+        "coordinates": [
+          25.413,
+          60.108
+        ]
       },
       "properties": {
         "id": "fi-soderskar",
@@ -1401,14 +1532,18 @@
         "arlhsCode": "FIN-056",
         "description": "Historyczna latarnia 150-letnia, wycofana z użytku w 1989 roku. Granitowa podstawa (8.6m), reszta z cegły. Obecnie na terenie rezerwatu przyrody, popularne rejsy z Helsinek.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%B6dersk%C3%A4r_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%B6dersk%C3%A4r_Lighthouse",
+        "admiraltyCode": "C5227"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.012, 60.718]
+        "coordinates": [
+          21.012,
+          60.718
+        ]
       },
       "properties": {
         "id": "fi-isokari",
@@ -1428,14 +1563,18 @@
         "arlhsCode": "FIN-022",
         "description": "Najwyższa latarnia w Zatoce Botnickiej i druga najwyższa w Finlandii (49m). Zbudowana w 1833 roku. Na wyspie działa hotel i restauracja. Popularny cel wycieczek.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Isokari_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Isokari_Lighthouse",
+        "admiraltyCode": "C4450"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.303, 61.144]
+        "coordinates": [
+          21.303,
+          61.144
+        ]
       },
       "properties": {
         "id": "fi-kylmapihlaja",
@@ -1455,14 +1594,18 @@
         "arlhsCode": "FIN-028",
         "description": "Latarnia przekształcona w hotel i restaurację. Betonowa wieża z 1953 roku na wyspie Kylmäpihlaja. Możliwość noclegu w pokojach z widokiem na morze. Rejsy z Rauma.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kylm%C3%A4pihlaja_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Kylm%C3%A4pihlaja_Lighthouse",
+        "admiraltyCode": "C4421"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [21.348, 61.477]
+        "coordinates": [
+          21.348,
+          61.477
+        ]
       },
       "properties": {
         "id": "fi-sappi",
@@ -1482,14 +1625,18 @@
         "arlhsCode": "FIN-050",
         "description": "Biała 28-metrowa latarnia na wyspie Säppi, nazywanej 'Islandią Finlandii'. Zaprojektowana przez Axela Hampusa Dalströma, uruchomiona w 1873. Stacja pilotów.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%A4ppi_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%A4ppi_Lighthouse",
+        "admiraltyCode": "C4398"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [22.852, 63.948]
+        "coordinates": [
+          22.852,
+          63.948
+        ]
       },
       "properties": {
         "id": "fi-tankar",
@@ -1509,14 +1656,18 @@
         "arlhsCode": "FIN-060",
         "description": "Popularna latarnia turystyczna na wyspie Tankar koło Kokkoli. Zbudowana w 1889, 122 schody prowadzące na szczyt. Na wyspie kaplica z 1754 i muzeum fok.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tankar_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Tankar_Lighthouse",
+        "admiraltyCode": "C4200"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [24.561, 65.040]
+        "coordinates": [
+          24.561,
+          65.04
+        ]
       },
       "properties": {
         "id": "fi-marjaniemi",
@@ -1536,7 +1687,8 @@
         "arlhsCode": "FIN-030",
         "description": "Najdalej na północ wysunięta latarnia w zestawieniu, na wyspie Hailuoto. Ceglana wieża z 1871 roku zaprojektowana przez Axela Hampusa Dahlströma. Dostępna drogą lądową przez prom na Hailuoto.",
         "imageUrl": null,
-        "wikipediaUrl": "https://en.wikipedia.org/wiki/Marjaniemi_Lighthouse"
+        "wikipediaUrl": "https://en.wikipedia.org/wiki/Marjaniemi_Lighthouse",
+        "admiraltyCode": "C4142.1"
       }
     }
   ]

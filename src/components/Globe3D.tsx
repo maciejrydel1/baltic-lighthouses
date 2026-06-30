@@ -3,7 +3,12 @@
 import dynamic from 'next/dynamic';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { GlobeMethods, GlobeProps } from 'react-globe.gl';
-import { Lighthouse, LIGHT_COLORS, LighthouseStatus } from '@/types/lighthouse';
+import Supercluster from 'supercluster';
+import {
+  Lighthouse,
+  LIGHT_COLORS,
+  LighthouseStatus,
+} from '@/types/lighthouse';
 
 // Kolory markerów w zależności od statusu
 const STATUS_COLORS: Record<LighthouseStatus, string> = {
@@ -18,6 +23,9 @@ const STATUS_RADIUS: Record<LighthouseStatus, number> = {
   inactive: 0.05,
   historical: 0.05,
 };
+
+const CLUSTER_COLOR = '#f59e0b';
+const CLUSTER_RADIUS_BASE = 0.1;
 
 interface GlobeWrapperProps extends GlobeProps {
   onGlobeRef?: (el: GlobeMethods | null) => void;
@@ -60,11 +68,14 @@ type PointData = {
   color: string;
   altitude: number;
   radius: number;
-  rangeNm: number;
-  lightColor: string;
-  yearBuilt: number;
-  heightM: number;
-  status: LighthouseStatus;
+  rangeNm?: number;
+  lightColor?: string;
+  yearBuilt?: number;
+  heightM?: number;
+  status?: LighthouseStatus;
+  cluster?: boolean;
+  pointCount?: number;
+  clusterId?: number;
 };
 
 type RingData = {
@@ -90,11 +101,23 @@ function assertRingData(d: object): RingData {
   return d as RingData;
 }
 
+// Przybliżone mapowanie altitude globu na poziom zoomu supercluster.
+function altitudeToZoom(altitude: number): number {
+  const safeAltitude = Math.max(0.05, altitude);
+  const zoom = Math.round(24 - safeAltitude * 8);
+  return Math.max(1, Math.min(24, zoom));
+}
+
 export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
   const [globeEl, setGlobeEl] = useState<GlobeMethods | null>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [isMobile, setIsMobile] = useState(false);
   const introStartedRef = useRef(false);
+
+  const superclusterRef = useRef<Supercluster | null>(null);
+  const [clusters, setClusters] = useState<
+    ReturnType<Supercluster['getClusters']>
+  >([]);
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout> | null = null;
@@ -157,20 +180,140 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
     };
   }, [globeEl]);
 
+  // Budowa indeksu supercluster po każdej zmianie zestawu latarni.
+  useEffect(() => {
+    if (lighthouses.length === 0) {
+      superclusterRef.current = null;
+      setClusters([]);
+      return;
+    }
+
+    const sc = new Supercluster({
+      radius: 60,
+      maxZoom: 16,
+      minPoints: 2,
+    });
+
+    const features: Supercluster.PointFeature<{ id: string }>[] =
+      lighthouses.map((l) => ({
+        type: 'Feature',
+        properties: { id: l.id },
+        geometry: {
+          type: 'Point',
+          coordinates: l.coordinates,
+        },
+      })) as Supercluster.PointFeature<{ id: string }>[];
+
+    sc.load(features);
+    superclusterRef.current = sc;
+
+    // Początkowe klastry przy widoku z daleka.
+    const initialClusters = sc.getClusters([-180, -85, 180, 85], 1);
+    setClusters(initialClusters);
+  }, [lighthouses]);
+
+  // Aktualizacja klastrów przy zmianie POV globu.
+  useEffect(() => {
+    if (!globeEl || !superclusterRef.current) return;
+
+    let frameId: number;
+    let isMounted = true;
+
+    const updateClusters = () => {
+      if (!isMounted || !globeEl || !superclusterRef.current) return;
+
+      const pov = globeEl.pointOfView();
+      const altitude = typeof pov.altitude === 'number' ? pov.altitude : 2.5;
+      const zoom = altitudeToZoom(altitude);
+      const nextClusters = superclusterRef.current.getClusters(
+        [-180, -85, 180, 85],
+        zoom
+      );
+      setClusters(nextClusters);
+      frameId = requestAnimationFrame(updateClusters);
+    };
+
+    frameId = requestAnimationFrame(updateClusters);
+
+    return () => {
+      isMounted = false;
+      cancelAnimationFrame(frameId);
+    };
+  }, [globeEl]);
+
   const handlePointClick = useCallback(
     (point: object) => {
       const data = assertPointData(point);
+
+      // Kliknięcie w klaster → przybliżenie do poziomu rozwinięcia.
+      if (data.cluster && data.clusterId !== undefined && globeEl && superclusterRef.current) {
+        try {
+          const expansionZoom = superclusterRef.current.getClusterExpansionZoom(
+            data.clusterId
+          );
+          const targetAltitude = Math.max(0.15, 24 / (expansionZoom * 3));
+          globeEl.pointOfView(
+            { lat: data.lat, lng: data.lng, altitude: targetAltitude },
+            800
+          );
+        } catch {
+          // Fallback: zwykłe przybliżenie.
+          globeEl?.pointOfView(
+            { lat: data.lat, lng: data.lng, altitude: 0.35 },
+            800
+          );
+        }
+        return;
+      }
+
       const lighthouse = lighthouses.find((l) => l.id === data.id);
       if (lighthouse) {
         onSelect(lighthouse);
       }
     },
-    [lighthouses, onSelect]
+    [lighthouses, onSelect, globeEl]
   );
 
-  // Markery - kolor i rozmiar zależą od statusu
+  // Markery - kolor i rozmiar zależą od statusu lub czy to klaster
   const pointsData = useMemo<PointData[]>(() => {
-    return lighthouses.map((l) => {
+    const lighthouseById = new Map(lighthouses.map((l) => [l.id, l]));
+
+    return clusters.map((cluster) => {
+      const [lng, lat] = cluster.geometry.coordinates;
+      const props = cluster.properties as
+        | Supercluster.ClusterProperties
+        | { id: string };
+
+      if ('cluster' in props && props.cluster) {
+        const count = props.point_count || 0;
+        return {
+          id: `cluster-${props.cluster_id}`,
+          lat,
+          lng,
+          name: `${count} latarni`,
+          color: CLUSTER_COLOR,
+          altitude: 0.008,
+          radius: CLUSTER_RADIUS_BASE + Math.min(0.08, count * 0.004),
+          cluster: true,
+          pointCount: count,
+          clusterId: props.cluster_id,
+        };
+      }
+
+      const id = (props as { id: string }).id;
+      const l = lighthouseById.get(id);
+      if (!l) {
+        return {
+          id,
+          lat,
+          lng,
+          name: '',
+          color: '#ffffff',
+          altitude: 0.005,
+          radius: 0.05,
+        };
+      }
+
       const isActive = l.status === 'active';
       const baseColor = isActive
         ? LIGHT_COLORS[l.lightColor] || LIGHT_COLORS.white
@@ -179,11 +322,11 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
 
       return {
         id: l.id,
-        lat: l.coordinates[1],
-        lng: l.coordinates[0],
+        lat,
+        lng,
         name: l.name,
         color: baseColor,
-        altitude: isActive ? 0.005 : 0.003, // nieaktywne niżej
+        altitude: isActive ? 0.005 : 0.003,
         radius: l.id === selectedId ? 0.12 : baseRadius,
         rangeNm: l.rangeNm,
         lightColor: l.lightColor,
@@ -192,7 +335,7 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
         status: l.status,
       };
     });
-  }, [lighthouses, selectedId]);
+  }, [clusters, lighthouses, selectedId]);
 
   // Pierścienie zasięgu
   const ringsData = useMemo<RingData[]>(() => {
@@ -211,12 +354,34 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
 
   const pointLabel = useCallback((d: object) => {
     const point = assertPointData(d);
+
+    if (point.cluster && point.pointCount) {
+      return `
+        <div style="
+          background: rgba(245, 158, 11, 0.92);
+          border-radius: 50%;
+          width: 44px;
+          height: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #000;
+          font-weight: 700;
+          font-size: 13px;
+          font-family: system-ui, -apple-system, sans-serif;
+          box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+        ">${point.pointCount}</div>
+      `;
+    }
+
     const statusLabel =
       point.status === 'active'
         ? '🟢 Aktywna'
         : point.status === 'inactive'
         ? '⚫ Nieaktywna'
-        : '🟤 Historyczna';
+        : point.status === 'historical'
+        ? '🟤 Historyczna'
+        : '';
 
     return `
       <div style="
@@ -232,11 +397,11 @@ export function Globe3D({ lighthouses, selectedId, onSelect }: Globe3DProps) {
         box-shadow: 0 4px 20px rgba(0,0,0,0.5);
       ">
         <div style="font-weight:700; color: #f59e0b; font-size:14px; margin-bottom:4px;">${point.name}</div>
-        <div style="font-size:11px; margin-bottom:4px;">${statusLabel}</div>
-        <div>Światło: <span style="color:${point.color}">●</span> ${point.lightColor}</div>
-        <div>Zasięg: ${point.rangeNm} Mm (~${Math.round(point.rangeNm * 1.852)} km)</div>
-        <div>Wysokość: ${point.heightM} m</div>
-        <div>Rok budowy: ${point.yearBuilt}</div>
+        ${statusLabel ? `<div style="font-size:11px; margin-bottom:4px;">${statusLabel}</div>` : ''}
+        ${point.lightColor ? `<div>Światło: <span style="color:${point.color}">●</span> ${point.lightColor}</div>` : ''}
+        ${point.rangeNm ? `<div>Zasięg: ${point.rangeNm} Mm (~${Math.round(point.rangeNm * 1.852)} km)</div>` : ''}
+        ${point.heightM ? `<div>Wysokość: ${point.heightM} m</div>` : ''}
+        ${point.yearBuilt ? `<div>Rok budowy: ${point.yearBuilt}</div>` : ''}
         <div style="margin-top:6px; font-size:11px; color:rgba(255,255,255,0.5)">Kliknij, aby zobaczyć szczegóły</div>
       </div>
     `;

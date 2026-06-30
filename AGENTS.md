@@ -9,11 +9,13 @@ Ten plik zawiera informacje potrzebne AI coding agentom do pracy nad projektem *
 Aplikacja webowa wizualizująca latarnie morskie Morza Bałtyckiego na interaktywnym, obracalnym globie 3D. Użytkownik może:
 
 - obracać i przybliżać glob,
-- klikać markery latarni,
+- klikać markery latarni oraz klastry markerów,
 - otwierać panel boczny ze szczegółami (parametry techniczne, zdjęcie, opis, link do Wikipedii),
-- zobaczyć animowany pierścień zasięgu światła dla wybranej latarni.
+- zobaczyć animowany pierścień zasięgu światła dla wybranej latarni,
+- filtrować latarnie po kraju, statusie i typie konstrukcji,
+- wyszukiwać latarnie tekstowo.
 
-Stan projektu: MVP rozszerzone o dane z sześciu krajów bałtyckich. Aktualnie **54 latarnie**: PL (16), FI (12), LV (7), EE (7), RU (7), LT (5). Wszystkie komentarze, UI i dokumentacja są głównie po polsku.
+Stan projektu: **v1.0 w trakcie**. Zaimplementowano MVP rozszerzone o dane z sześciu krajów bałtyckich — aktualnie **54 latarnie**: PL (16), FI (12), LV (7), EE (7), RU (7), LT (5). Wszystkie komentarze, UI i dokumentacja są głównie po polsku.
 
 ---
 
@@ -31,7 +33,7 @@ Stan projektu: MVP rozszerzone o dane z sześciu krajów bałtyckich. Aktualnie 
 | Dane | Statyczny GeoJSON | `/public/data/lighthouses.geojson` |
 | Tekstury | NASA Blue Marble + topologia + nocne niebo | `/public/textures/` |
 | Linting | ESLint | `next/core-web-vitals` |
-| CI/CD | GitHub Actions | Node 20, `npm ci`, lint, build |
+| CI/CD | GitHub Actions | Node 20, `npm ci`, lint, build, test |
 | Hosting | Vercel | skonfigurowany (`.vercel/project.json`) |
 
 ---
@@ -53,13 +55,20 @@ baltic-lighthouses/
 │   │   ├── globals.css              # Tailwind + style globalne
 │   │   ├── layout.tsx               # Layout główny, metadata, lang="pl"
 │   │   ├── page.tsx                 # Strona główna — Server Component, pobiera dane
-│   │   └── LighthousesClient.tsx    # Klient — zarządza stanem, renderuje glob i panel
+│   │   └── LighthousesClient.tsx    # Klient — stan, filtry, wyszukiwarka, glob, panel
 │   ├── components/
-│   │   ├── Globe3D.tsx              # Komponent globu 3D (react-globe.gl)
-│   │   └── LighthousePanel.tsx      # Panel boczny ze szczegółami latarni
-│   └── types/
-│       └── lighthouse.ts            # Interfejsy TypeScript + helpery
-├── next.config.js                   # React Strict Mode OFF, obrazki Wikimedia
+│   │   ├── Globe3D.tsx              # Komponent globu 3D (react-globe.gl) z klastrowaniem
+│   │   ├── LighthousePanel.tsx      # Panel boczny ze szczegółami latarni
+│   │   ├── SearchBox.tsx            # Wyszukiwarka tekstowa
+│   │   └── FilterBar.tsx            # Filtry (kraj, status, typ konstrukcji)
+│   ├── lib/
+│   │   └── filters.ts               # Logika filtrowania i wyszukiwania
+│   ├── types/
+│   │   └── lighthouse.ts            # Interfejsy TypeScript + helpery
+│   └── test/
+│       ├── setup.ts                 # Konfiguracja testów (mock next/image)
+│       └── fixtures.ts              # Dane testowe
+├── next.config.js                   # React Strict Mode ON, obrazki Wikimedia
 ├── package.json                     # Skrypty i zależności
 ├── postcss.config.js                # Tailwind + autoprefixer
 ├── tailwind.config.js               # Konfiguracja Tailwind (kolory amber)
@@ -79,18 +88,29 @@ Server Component (async). Odpowiedzialny za:
 
 ### `src/components/LighthousesClient.tsx`
 Komponent kliencki (`'use client'`). Odpowiedzialny za:
-- przechowywanie stanu `selected`,
+- przechowywanie stanu `selected`, `searchQuery` i `filters`,
+- filtrowanie i wyszukiwanie latarni (`applyFiltersAndSearch`),
 - obsługę zdarzeń `onSelect` / `onClose`,
-- renderowanie `<Globe3D>` i `<LighthousePanel>` oraz nakładki UI (tytuł, statystyki).
+- renderowanie `<SearchBox>`, `<FilterBar>`, `<Globe3D>` i `<LighthousePanel>` oraz nakładki UI (tytuł, statystyki).
 
 ### `src/components/Globe3D.tsx`
 Najważniejszy komponent wizualny. Uwagi krytyczne:
 - `react-globe.gl` jest importowany dynamicznie z `{ ssr: false }`, ponieważ biblioteka korzysta z `window`/`document`.
-- `reactStrictMode` jest **wyłączony** w `next.config.js`, bo podwójne mountowanie w dev psuje Globe.gl.
+- `reactStrictMode` jest **włączony** w `next.config.js`; efekty w `Globe3D` są zabezpieczone flagami `mounted`, aby uniknąć problemów z podwójnym montowaniem w dev.
 - Używa `forwardRef` / callback ref, aby uzyskać dostęp do instancji globu i animować `pointOfView()`.
 - Markery renderowane przez `pointsData`; kolory zależą od `status` i `lightColor`.
 - Po kliknięciu markera glob zoomuje do latarni i wyświetla pierścień zasięgu (`ringsData`).
 - Na urządzeniach mobilnych ładowana jest mniejsza tekstura (`earth-blue-marble.jpg`), na desktopie `earth-8k.webp` (~1,8 MB, WebP 8K).
+- **Klastrowanie markerów** przez `supercluster`: przy oddalaniu globu pojedyncze latarnie grupują się w klastry z liczbą punktów. Kliknięcie klastra przybliża widok do jego rozwinięcia.
+
+### `src/components/SearchBox.tsx` i `FilterBar.tsx`
+Komponenty UI dla wyszukiwarki i filtrów. Stan żyje w `LighthousesClient`; `FilterBar` otrzymuje dostępne kraje z pełnej listy latarni.
+
+### `src/lib/filters.ts`
+Czyste funkcje do filtrowania i wyszukiwania:
+- `filterLighthouses` — filtry po kraju, statusie i kategorii konstrukcji.
+- `searchLighthouses` — wyszukiwanie tekstowe po nazwie, nazwie lokalnej, opisie i nazwie kraju.
+- `applyFiltersAndSearch` — łączy obie operacje.
 
 ### `src/components/LighthousePanel.tsx`
 Panel boczny ze szczegółami latarni:
@@ -127,9 +147,14 @@ npm start
 
 # Linting ESLint
 npm run lint
+
+# Testy (Vitest + React Testing Library + jsdom)
+npm run test
+npm run test:watch
+npm run test:coverage
 ```
 
-Brak skonfigurowanych testów jednostkowych ani E2E. CI uruchamia tylko `npm run lint` i `npm run build`.
+CI uruchamia `npm run lint`, `npm run build` i `npm run test`.
 
 ---
 
@@ -142,16 +167,18 @@ Brak skonfigurowanych testów jednostkowych ani E2E. CI uruchamia tylko `npm run
 - **Typy**: zawsze TypeScript; unikaj `any`.
 - **Tailwind**: klasy używane inline; kolory projektowe to ciemne tło `#0a0a1a` i bursztynowy akcent `#f59e0b`.
 - **Dane**: wszystkie informacje o latarniach trzymane w `/public/data/lighthouses.geojson`. Nie hardkoduj listy latarni w komponentach.
+- **Metadane**: pole `admiraltyCode` jest uzupełnione dla 52/54 latarni; braki (`lt-ventes-ragas`, `ru-zalivino`) pozostaw puste, jeśli brak aktywnego kodu w źródłach (Admiralty List of Lights, Wikidata, ibiblio.org).
 
 ---
 
 ## 7. Testing instructions
 
-Obecnie projekt **nie zawiera testów automatycznych**. Walidacja odbywa się przez:
+Projekt zawiera testy automatyczne **Vitest + React Testing Library + jsdom** (44 testy w 6 plikach). Walidacja odbywa się przez:
 
 1. `npm run lint` — sprawdzenie lintingu.
 2. `npm run build` — sprawdzenie, czy aplikacja się buduje.
-3. Ręczne testy UI:
+3. `npm test` — uruchomienie testów jednostkowych.
+4. Ręczne testy UI:
    - glob się ładuje,
    - markery są klikalne,
    - panel boczny otwiera się i zamyka,
@@ -187,7 +214,7 @@ Jeśli dodajesz testy, użyj narzędzi kompatybilnych z Next.js + React (np. Vit
 
 ## 10. Important conventions and caveats
 
-- **React Strict Mode musi być wyłączony** — Globe.gl nie działa poprawnie przy podwójnym renderowaniu w deweloperskim Strict Mode.
+- **React Strict Mode jest włączony** — `Globe3D` zabezpiecza się przed podwójnym montowaniem w dev flagami `mounted`/`isMounted`. Jeśli dodajesz nowe efekty w komponentach globu, upewnij się, że poprawnie je czyszczą.
 - **Globe.gl wymaga klienta**: nigdy nie importuj `react-globe.gl` bezpośrednio w komponentach serwerowych; zawsze używaj `dynamic(() => import(...), { ssr: false })`.
 - **Zdjęcia**: system preferuje lokalne pliki w `/public/images/lighthouses/{id}.jpg`; `imageUrl` z GeoJSON to fallback (zazwyczaj Wikimedia).
 - **Współrzędne**: w GeoJSON zapisane jako `[lng, lat]`; w `Lighthouse.coordinates` również `[lng, lat]`.
